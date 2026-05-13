@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "linear": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@tacticlaunch/mcp-linear"
+      ],
+      "env": {
+        "LINEAR_API_KEY": "${secret:LINEAR_API_KEY}"
+      }
+    }
+  }
+}

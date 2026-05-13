@@ -1,0 +1,1643 @@
+{
+  "name": "Fleet Official",
+  "description": "Curated plugins by the Fleetify team. Browse, install, and configure standard integrations for every Fleet session.",
+  "homepage": "https://github.com/fleetify/marketplace",
+  "icon": "icon.png",
+  "plugins": [
+    {
+      "path": "github",
+      "featured": true,
+      "manifest": {
+        "name": "github",
+        "version": "0.1.0",
+        "description": "Read issues, PRs, file contents, and search across any GitHub repo the agent has access to.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity",
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/github.svg",
+        "requires_secrets": [
+          {
+            "key": "GITHUB_TOKEN",
+            "label": "GitHub Personal Access Token",
+            "url": "https://github.com/settings/tokens"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "postgres",
+      "featured": true,
+      "manifest": {
+        "name": "postgres",
+        "version": "0.1.0",
+        "description": "Query, inspect schemas, run EXPLAIN \u2014 read-only Postgres MCP.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data",
+          "infrastructure"
+        ],
+        "icon": "https://www.postgresql.org/media/img/about/press/elephant.png",
+        "requires_secrets": [
+          {
+            "key": "POSTGRES_URL",
+            "label": "Connection string",
+            "url": "https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "slack",
+      "featured": true,
+      "manifest": {
+        "name": "slack",
+        "version": "0.1.0",
+        "description": "Read channel history, post messages, manage Slack from any agent.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/slack.svg",
+        "requires_secrets": [
+          {
+            "key": "SLACK_BOT_TOKEN",
+            "label": "Slack Bot Token (xoxb-\u2026)",
+            "url": "https://api.slack.com/apps"
+          },
+          {
+            "key": "SLACK_TEAM_ID",
+            "label": "Slack Team ID (T\u2026)",
+            "url": "https://api.slack.com/methods/team.info"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "linear",
+      "featured": true,
+      "manifest": {
+        "name": "linear",
+        "version": "0.1.0",
+        "description": "Browse issues, projects, and cycles. Create + update Linear issues from chat.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/linear.svg",
+        "requires_secrets": [
+          {
+            "key": "LINEAR_API_KEY",
+            "label": "Linear API key",
+            "url": "https://linear.app/settings/api"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "notion",
+      "featured": true,
+      "manifest": {
+        "name": "notion",
+        "version": "0.1.0",
+        "description": "Read + write Notion pages, databases, and blocks straight from chat.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/notion.svg",
+        "requires_secrets": [
+          {
+            "key": "NOTION_API_KEY",
+            "label": "Notion Integration secret",
+            "url": "https://www.notion.so/my-integrations"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "figma",
+      "featured": true,
+      "manifest": {
+        "name": "figma",
+        "version": "0.1.0",
+        "description": "Read frames, components, and design tokens from any Figma file.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/figma.svg",
+        "requires_secrets": [
+          {
+            "key": "FIGMA_TOKEN",
+            "label": "Figma personal access token",
+            "url": "https://www.figma.com/developers/api#access-tokens"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "filesystem",
+      "featured": true,
+      "manifest": {
+        "name": "filesystem",
+        "version": "0.1.0",
+        "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity",
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/files.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "memory",
+      "featured": true,
+      "manifest": {
+        "name": "memory",
+        "version": "0.1.0",
+        "description": "Persistent knowledge-graph memory: entities, relations, and observations across sessions.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/databricks.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "aws",
+      "featured": false,
+      "manifest": {
+        "name": "aws",
+        "version": "0.1.0",
+        "description": "Inspect AWS resources \u2014 EC2, S3, Lambda, IAM \u2014 with read-only credentials.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/amazonwebservices.svg",
+        "requires_secrets": [
+          {
+            "key": "AWS_ACCESS_KEY_ID",
+            "label": "AWS Access Key ID"
+          },
+          {
+            "key": "AWS_SECRET_ACCESS_KEY",
+            "label": "AWS Secret Access Key"
+          },
+          {
+            "key": "AWS_REGION",
+            "label": "Default region (e.g. us-east-1)"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "cloudflare",
+      "featured": false,
+      "manifest": {
+        "name": "cloudflare",
+        "version": "0.1.0",
+        "description": "Manage Workers, KV, R2, DNS records \u2014 Cloudflare's official MCP.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/cloudflare.svg",
+        "requires_secrets": [
+          {
+            "key": "CLOUDFLARE_API_TOKEN",
+            "label": "Cloudflare API token",
+            "url": "https://dash.cloudflare.com/profile/api-tokens"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "vercel",
+      "featured": false,
+      "manifest": {
+        "name": "vercel",
+        "version": "0.1.0",
+        "description": "List deployments, inspect builds, fetch logs from your Vercel projects.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/vercel.svg",
+        "requires_secrets": [
+          {
+            "key": "VERCEL_TOKEN",
+            "label": "Vercel API token",
+            "url": "https://vercel.com/account/tokens"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "supabase",
+      "featured": false,
+      "manifest": {
+        "name": "supabase",
+        "version": "0.1.0",
+        "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure",
+          "data"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/supabase.svg",
+        "requires_secrets": [
+          {
+            "key": "SUPABASE_URL",
+            "label": "Project URL"
+          },
+          {
+            "key": "SUPABASE_KEY",
+            "label": "Service role key",
+            "url": "https://supabase.com/dashboard/project/_/settings/api"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "docker",
+      "featured": false,
+      "manifest": {
+        "name": "docker",
+        "version": "0.1.0",
+        "description": "List containers, inspect images, tail logs \u2014 local Docker daemon over the socket.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/docker.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "kubernetes",
+      "featured": false,
+      "manifest": {
+        "name": "kubernetes",
+        "version": "0.1.0",
+        "description": "Inspect pods, services, deployments via your current kubectl context.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/kubernetes.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "datadog",
+      "featured": false,
+      "manifest": {
+        "name": "datadog",
+        "version": "0.1.0",
+        "description": "Query metrics, search logs, browse dashboards from Datadog.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data",
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/datadog.svg",
+        "requires_secrets": [
+          {
+            "key": "DD_API_KEY",
+            "label": "Datadog API key"
+          },
+          {
+            "key": "DD_APP_KEY",
+            "label": "Datadog Application key"
+          },
+          {
+            "key": "DD_SITE",
+            "label": "Datadog site (datadoghq.com / datadoghq.eu / \u2026)"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "sentry",
+      "featured": false,
+      "manifest": {
+        "name": "sentry",
+        "version": "0.1.0",
+        "description": "Browse error groups, fetch stack traces, triage issues from Sentry.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sentry.svg",
+        "requires_secrets": [
+          {
+            "key": "SENTRY_AUTH_TOKEN",
+            "label": "Sentry auth token",
+            "url": "https://sentry.io/settings/account/api/auth-tokens/"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "mongodb",
+      "featured": false,
+      "manifest": {
+        "name": "mongodb",
+        "version": "0.1.0",
+        "description": "Connect to MongoDB clusters: list collections, run aggregations, inspect indexes.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/mongodb.svg",
+        "requires_secrets": [
+          {
+            "key": "MONGODB_URI",
+            "label": "MongoDB connection URI"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "redis",
+      "featured": false,
+      "manifest": {
+        "name": "redis",
+        "version": "0.1.0",
+        "description": "Read-only Redis client: keys, hashes, lists, sorted-sets inspection.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/redis.svg",
+        "requires_secrets": [
+          {
+            "key": "REDIS_URL",
+            "label": "Redis URL (redis://\u2026)"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "snowflake",
+      "featured": false,
+      "manifest": {
+        "name": "snowflake",
+        "version": "0.1.0",
+        "description": "Run SQL against Snowflake warehouses, inspect schemas and warehouses.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/snowflake.svg",
+        "requires_secrets": [
+          {
+            "key": "SNOWFLAKE_ACCOUNT",
+            "label": "Account identifier"
+          },
+          {
+            "key": "SNOWFLAKE_USER",
+            "label": "Username"
+          },
+          {
+            "key": "SNOWFLAKE_PASSWORD",
+            "label": "Password"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "git",
+      "featured": false,
+      "manifest": {
+        "name": "git",
+        "version": "0.1.0",
+        "description": "Local git operations \u2014 diff, log, blame, branch \u2014 without leaving chat.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/git.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "gitlab",
+      "featured": false,
+      "manifest": {
+        "name": "gitlab",
+        "version": "0.1.0",
+        "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/gitlab.svg",
+        "requires_secrets": [
+          {
+            "key": "GITLAB_PERSONAL_ACCESS_TOKEN",
+            "label": "GitLab PAT"
+          },
+          {
+            "key": "GITLAB_API_URL",
+            "label": "GitLab instance URL (default https://gitlab.com/api/v4)"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "stripe",
+      "featured": false,
+      "manifest": {
+        "name": "stripe",
+        "version": "0.1.0",
+        "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/stripe.svg",
+        "requires_secrets": [
+          {
+            "key": "STRIPE_SECRET_KEY",
+            "label": "Stripe secret key (sk_\u2026)",
+            "url": "https://dashboard.stripe.com/apikeys"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "puppeteer",
+      "featured": false,
+      "manifest": {
+        "name": "puppeteer",
+        "version": "0.1.0",
+        "description": "Headless-Chrome browser control: navigate, click, screenshot, extract text.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/puppeteer.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "playwright",
+      "featured": false,
+      "manifest": {
+        "name": "playwright",
+        "version": "0.1.0",
+        "description": "Cross-browser automation (Chromium / Firefox / WebKit) for tests and scraping.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/playwright.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "sqlite",
+      "featured": false,
+      "manifest": {
+        "name": "sqlite",
+        "version": "0.1.0",
+        "description": "Local SQLite client: query schemas, run SELECT, inspect indexes.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sqlite.svg",
+        "requires_secrets": [
+          {
+            "key": "SQLITE_DB_PATH",
+            "label": "Absolute path to the .db file"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "brave-search",
+      "featured": false,
+      "manifest": {
+        "name": "brave-search",
+        "version": "0.1.0",
+        "description": "Anonymous web + local search via Brave's API. Default goto for grounded research.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/brave.svg",
+        "requires_secrets": [
+          {
+            "key": "BRAVE_API_KEY",
+            "label": "Brave Search API key",
+            "url": "https://brave.com/search/api/"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "tavily",
+      "featured": false,
+      "manifest": {
+        "name": "tavily",
+        "version": "0.1.0",
+        "description": "LLM-tuned search API: clean snippets, recency-ranked, cite-able.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://www.tavily.com/favicon.ico",
+        "requires_secrets": [
+          {
+            "key": "TAVILY_API_KEY",
+            "label": "Tavily API key",
+            "url": "https://tavily.com"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "fetch",
+      "featured": false,
+      "manifest": {
+        "name": "fetch",
+        "version": "0.1.0",
+        "description": "Plain HTTP fetcher: get any URL and return cleaned text, no auth required.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/internetexplorer.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "perplexity",
+      "featured": false,
+      "manifest": {
+        "name": "perplexity",
+        "version": "0.1.0",
+        "description": "Perplexity Sonar API \u2014 multi-step web answers with inline citations.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/perplexity.svg",
+        "requires_secrets": [
+          {
+            "key": "PERPLEXITY_API_KEY",
+            "label": "Perplexity API key",
+            "url": "https://www.perplexity.ai/settings/api"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "google-drive",
+      "featured": false,
+      "manifest": {
+        "name": "google-drive",
+        "version": "0.1.0",
+        "description": "List, read, and search Google Drive files. OAuth-based, read-only by default.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googledrive.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "google-calendar",
+      "featured": false,
+      "manifest": {
+        "name": "google-calendar",
+        "version": "0.1.0",
+        "description": "Read events, create + update Calendar entries across your Google calendars.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googlecalendar.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "gmail",
+      "featured": false,
+      "manifest": {
+        "name": "gmail",
+        "version": "0.1.0",
+        "description": "Read inbox, draft + send messages, manage labels via Gmail's API.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/gmail.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "google-maps",
+      "featured": false,
+      "manifest": {
+        "name": "google-maps",
+        "version": "0.1.0",
+        "description": "Geocode addresses, get directions, search nearby places.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googlemaps.svg",
+        "requires_secrets": [
+          {
+            "key": "GOOGLE_MAPS_API_KEY",
+            "label": "Google Maps API key",
+            "url": "https://console.cloud.google.com/google/maps-apis/credentials"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "discord",
+      "featured": false,
+      "manifest": {
+        "name": "discord",
+        "version": "0.1.0",
+        "description": "Bot-level Discord operations: read channels, post messages, manage roles.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/discord.svg",
+        "requires_secrets": [
+          {
+            "key": "DISCORD_TOKEN",
+            "label": "Discord bot token",
+            "url": "https://discord.com/developers/applications"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "twilio",
+      "featured": false,
+      "manifest": {
+        "name": "twilio",
+        "version": "0.1.0",
+        "description": "Send SMS, place voice calls, manage Twilio phone numbers.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/twilio.svg",
+        "requires_secrets": [
+          {
+            "key": "TWILIO_ACCOUNT_SID",
+            "label": "Account SID"
+          },
+          {
+            "key": "TWILIO_AUTH_TOKEN",
+            "label": "Auth token"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "sendgrid",
+      "featured": false,
+      "manifest": {
+        "name": "sendgrid",
+        "version": "0.1.0",
+        "description": "Send transactional + marketing email via SendGrid.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "infrastructure"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sendgrid.svg",
+        "requires_secrets": [
+          {
+            "key": "SENDGRID_API_KEY",
+            "label": "SendGrid API key",
+            "url": "https://app.sendgrid.com/settings/api_keys"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "jira",
+      "featured": false,
+      "manifest": {
+        "name": "jira",
+        "version": "0.1.0",
+        "description": "Read + update Jira tickets, sprints, and projects across Atlassian Cloud.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/jira.svg",
+        "requires_secrets": [
+          {
+            "key": "JIRA_HOST",
+            "label": "Jira host (your-domain.atlassian.net)"
+          },
+          {
+            "key": "JIRA_EMAIL",
+            "label": "Account email"
+          },
+          {
+            "key": "JIRA_API_TOKEN",
+            "label": "API token",
+            "url": "https://id.atlassian.com/manage-profile/security/api-tokens"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "asana",
+      "featured": false,
+      "manifest": {
+        "name": "asana",
+        "version": "0.1.0",
+        "description": "Browse projects, tasks, and teams. Update task status from chat.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/asana.svg",
+        "requires_secrets": [
+          {
+            "key": "ASANA_TOKEN",
+            "label": "Asana Personal Access Token",
+            "url": "https://app.asana.com/0/my-apps"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "pinecone",
+      "featured": false,
+      "manifest": {
+        "name": "pinecone",
+        "version": "0.1.0",
+        "description": "Pinecone vector DB \u2014 query, upsert, manage indexes.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://avatars.githubusercontent.com/u/54333248?s=200&v=4",
+        "requires_secrets": [
+          {
+            "key": "PINECONE_API_KEY",
+            "label": "Pinecone API key",
+            "url": "https://app.pinecone.io"
+          },
+          {
+            "key": "PINECONE_INDEX",
+            "label": "Default index name"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "weaviate",
+      "featured": false,
+      "manifest": {
+        "name": "weaviate",
+        "version": "0.1.0",
+        "description": "Weaviate vector DB \u2014 hybrid search, generative modules, semantic queries.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "data"
+        ],
+        "icon": "https://avatars.githubusercontent.com/u/37794290?s=200&v=4",
+        "requires_secrets": [
+          {
+            "key": "WEAVIATE_URL",
+            "label": "Weaviate endpoint URL"
+          },
+          {
+            "key": "WEAVIATE_API_KEY",
+            "label": "Weaviate API key"
+          }
+        ],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "sequential-thinking",
+      "featured": false,
+      "manifest": {
+        "name": "sequential-thinking",
+        "version": "0.1.0",
+        "description": "Skill that prompts the agent to break a problem into numbered steps and revise mid-flight.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/openai.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "skills": 0,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "code-reviewer",
+      "featured": false,
+      "manifest": {
+        "name": "code-reviewer",
+        "version": "0.1.0",
+        "description": "Subagent template that audits diffs for safety, style, and missing tests.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/codereview.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 0,
+          "skills": 0,
+          "templates": 1,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "no-mocks-rule",
+      "featured": false,
+      "manifest": {
+        "name": "no-mocks-rule",
+        "version": "0.1.0",
+        "description": "System-prompt rule forbidding mocks in integration tests; agents must hit a real test DB.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/testinglibrary.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 0,
+          "skills": 1,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    },
+    {
+      "path": "diff-summarizer",
+      "featured": false,
+      "manifest": {
+        "name": "diff-summarizer",
+        "version": "0.1.0",
+        "description": "Skill that turns `git diff` output into a tight PR-ready summary.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetify"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini"
+        ],
+        "tags": [
+          "productivity"
+        ],
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/git.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 0,
+          "skills": 1,
+          "templates": 0,
+          "commands": 0,
+          "hooks": 0,
+          "workflows": 0
+        },
+        "license": "MIT"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "kubernetes",
+  "version": "0.1.0",
+  "description": "Inspect pods, services, deployments via your current kubectl context.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "infrastructure"
+  ],
+  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/kubernetes.svg",
+  "requires_secrets": [],
+  "declares": {
+    "mcp_servers": 1,
+    "skills": 0,
+    "templates": 0,
+    "commands": 0,
+    "hooks": 0,
+    "workflows": 0
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "twilio": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@twilio/mcp-server"
+      ],
+      "env": {
+        "TWILIO_ACCOUNT_SID": "${secret:TWILIO_ACCOUNT_SID}",
+        "TWILIO_AUTH_TOKEN": "${secret:TWILIO_AUTH_TOKEN}"
+      }
+    }
+  }
+}

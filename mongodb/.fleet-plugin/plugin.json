@@ -1,0 +1,33 @@
+{
+  "name": "mongodb",
+  "version": "0.1.0",
+  "description": "Connect to MongoDB clusters: list collections, run aggregations, inspect indexes.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "data"
+  ],
+  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/mongodb.svg",
+  "requires_secrets": [
+    {
+      "key": "MONGODB_URI",
+      "label": "MongoDB connection URI"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "skills": 0,
+    "templates": 0,
+    "commands": 0,
+    "hooks": 0,
+    "workflows": 0
+  },
+  "license": "MIT"
+}

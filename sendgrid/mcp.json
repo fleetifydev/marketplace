@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "sendgrid": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@sendgrid/mcp"
+      ],
+      "env": {
+        "SENDGRID_API_KEY": "${secret:SENDGRID_API_KEY}"
+      }
+    }
+  }
+}

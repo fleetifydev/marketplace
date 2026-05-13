@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "redis": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-redis",
+        "${secret:REDIS_URL}"
+      ]
+    }
+  }
+}

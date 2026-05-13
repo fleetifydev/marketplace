@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "mongodb": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mongodb-mcp-server"
+      ],
+      "env": {
+        "MONGODB_URI": "${secret:MONGODB_URI}"
+      }
+    }
+  }
+}

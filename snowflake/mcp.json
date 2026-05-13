@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "snowflake": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-snowflake-server"
+      ],
+      "env": {
+        "SNOWFLAKE_ACCOUNT": "${secret:SNOWFLAKE_ACCOUNT}",
+        "SNOWFLAKE_USER": "${secret:SNOWFLAKE_USER}",
+        "SNOWFLAKE_PASSWORD": "${secret:SNOWFLAKE_PASSWORD}"
+      }
+    }
+  }
+}

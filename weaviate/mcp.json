@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "weaviate": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-weaviate"
+      ],
+      "env": {
+        "WEAVIATE_URL": "${secret:WEAVIATE_URL}",
+        "WEAVIATE_API_KEY": "${secret:WEAVIATE_API_KEY}"
+      }
+    }
+  }
+}

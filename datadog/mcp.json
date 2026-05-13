@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "datadog": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@datadog/mcp"
+      ],
+      "env": {
+        "DD_API_KEY": "${secret:DD_API_KEY}",
+        "DD_APP_KEY": "${secret:DD_APP_KEY}",
+        "DD_SITE": "${secret:DD_SITE}"
+      }
+    }
+  }
+}

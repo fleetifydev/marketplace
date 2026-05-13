@@ -1,0 +1,29 @@
+{
+  "name": "filesystem",
+  "version": "0.1.0",
+  "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity",
+    "infrastructure"
+  ],
+  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/files.svg",
+  "requires_secrets": [],
+  "declares": {
+    "mcp_servers": 1,
+    "skills": 0,
+    "templates": 0,
+    "commands": 0,
+    "hooks": 0,
+    "workflows": 0
+  },
+  "license": "MIT"
+}

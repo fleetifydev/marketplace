@@ -1,0 +1,34 @@
+{
+  "name": "brave-search",
+  "version": "0.1.0",
+  "description": "Anonymous web + local search via Brave's API. Default goto for grounded research.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/brave.svg",
+  "requires_secrets": [
+    {
+      "key": "BRAVE_API_KEY",
+      "label": "Brave Search API key",
+      "url": "https://brave.com/search/api/"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "skills": 0,
+    "templates": 0,
+    "commands": 0,
+    "hooks": 0,
+    "workflows": 0
+  },
+  "license": "MIT"
+}

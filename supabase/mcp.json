@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase"
+      ],
+      "env": {
+        "SUPABASE_URL": "${secret:SUPABASE_URL}",
+        "SUPABASE_SERVICE_ROLE_KEY": "${secret:SUPABASE_KEY}"
+      }
+    }
+  }
+}

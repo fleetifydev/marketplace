@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "perplexity": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "server-perplexity-ask"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "${secret:PERPLEXITY_API_KEY}"
+      }
+    }
+  }
+}

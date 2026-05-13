@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "discord": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@hanweg/mcp-discord"
+      ],
+      "env": {
+        "DISCORD_TOKEN": "${secret:DISCORD_TOKEN}"
+      }
+    }
+  }
+}

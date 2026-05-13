@@ -1,0 +1,37 @@
+{
+  "name": "gitlab",
+  "version": "0.1.0",
+  "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/gitlab.svg",
+  "requires_secrets": [
+    {
+      "key": "GITLAB_PERSONAL_ACCESS_TOKEN",
+      "label": "GitLab PAT"
+    },
+    {
+      "key": "GITLAB_API_URL",
+      "label": "GitLab instance URL (default https://gitlab.com/api/v4)"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "skills": 0,
+    "templates": 0,
+    "commands": 0,
+    "hooks": 0,
+    "workflows": 0
+  },
+  "license": "MIT"
+}

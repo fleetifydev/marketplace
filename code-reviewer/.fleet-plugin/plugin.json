@@ -1,0 +1,28 @@
+{
+  "name": "code-reviewer",
+  "version": "0.1.0",
+  "description": "Subagent template that audits diffs for safety, style, and missing tests.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/codereview.svg",
+  "requires_secrets": [],
+  "declares": {
+    "mcp_servers": 0,
+    "skills": 0,
+    "templates": 1,
+    "commands": 0,
+    "hooks": 0,
+    "workflows": 0
+  },
+  "license": "MIT"
+}
