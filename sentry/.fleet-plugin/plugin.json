@@ -14,7 +14,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sentry.svg",
+  "icon": "https://api.iconify.design/logos:sentry-icon.svg",
   "requires_secrets": [
     {
       "key": "SENTRY_AUTH_TOKEN",

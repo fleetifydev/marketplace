@@ -14,7 +14,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/notion.svg",
+  "icon": "https://api.iconify.design/logos:notion-icon.svg",
   "requires_secrets": [
     {
       "key": "NOTION_API_KEY",

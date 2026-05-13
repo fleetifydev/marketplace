@@ -24,7 +24,7 @@
           "productivity",
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/github.svg",
+        "icon": "https://api.iconify.design/logos:github-icon.svg",
         "requires_secrets": [
           {
             "key": "GITHUB_TOKEN",
@@ -63,7 +63,7 @@
           "data",
           "infrastructure"
         ],
-        "icon": "https://www.postgresql.org/media/img/about/press/elephant.png",
+        "icon": "https://api.iconify.design/logos:postgresql.svg",
         "requires_secrets": [
           {
             "key": "POSTGRES_URL",
@@ -101,7 +101,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/slack.svg",
+        "icon": "https://api.iconify.design/logos:slack-icon.svg",
         "requires_secrets": [
           {
             "key": "SLACK_BOT_TOKEN",
@@ -144,7 +144,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/linear.svg",
+        "icon": "https://api.iconify.design/logos:linear-icon.svg",
         "requires_secrets": [
           {
             "key": "LINEAR_API_KEY",
@@ -182,7 +182,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/notion.svg",
+        "icon": "https://api.iconify.design/logos:notion-icon.svg",
         "requires_secrets": [
           {
             "key": "NOTION_API_KEY",
@@ -220,7 +220,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/figma.svg",
+        "icon": "https://api.iconify.design/logos:figma.svg",
         "requires_secrets": [
           {
             "key": "FIGMA_TOKEN",
@@ -259,7 +259,7 @@
           "productivity",
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/files.svg",
+        "icon": "https://api.iconify.design/ic:round-folder-special.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -291,7 +291,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/databricks.svg",
+        "icon": "https://api.iconify.design/mdi:database.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -323,7 +323,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/amazonwebservices.svg",
+        "icon": "https://api.iconify.design/logos:aws.svg",
         "requires_secrets": [
           {
             "key": "AWS_ACCESS_KEY_ID",
@@ -368,7 +368,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/cloudflare.svg",
+        "icon": "https://api.iconify.design/logos:cloudflare.svg",
         "requires_secrets": [
           {
             "key": "CLOUDFLARE_API_TOKEN",
@@ -406,7 +406,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/vercel.svg",
+        "icon": "https://api.iconify.design/logos:vercel-icon.svg",
         "requires_secrets": [
           {
             "key": "VERCEL_TOKEN",
@@ -445,7 +445,7 @@
           "infrastructure",
           "data"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/supabase.svg",
+        "icon": "https://api.iconify.design/logos:supabase-icon.svg",
         "requires_secrets": [
           {
             "key": "SUPABASE_URL",
@@ -487,7 +487,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/docker.svg",
+        "icon": "https://api.iconify.design/logos:docker-icon.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -519,7 +519,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/kubernetes.svg",
+        "icon": "https://api.iconify.design/logos:kubernetes.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -552,7 +552,7 @@
           "data",
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/datadog.svg",
+        "icon": "https://api.iconify.design/logos:datadog.svg",
         "requires_secrets": [
           {
             "key": "DD_API_KEY",
@@ -597,7 +597,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sentry.svg",
+        "icon": "https://api.iconify.design/logos:sentry-icon.svg",
         "requires_secrets": [
           {
             "key": "SENTRY_AUTH_TOKEN",
@@ -635,7 +635,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/mongodb.svg",
+        "icon": "https://api.iconify.design/logos:mongodb-icon.svg",
         "requires_secrets": [
           {
             "key": "MONGODB_URI",
@@ -672,7 +672,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/redis.svg",
+        "icon": "https://api.iconify.design/logos:redis.svg",
         "requires_secrets": [
           {
             "key": "REDIS_URL",
@@ -709,7 +709,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/snowflake.svg",
+        "icon": "https://api.iconify.design/mdi:snowflake.svg",
         "requires_secrets": [
           {
             "key": "SNOWFLAKE_ACCOUNT",
@@ -754,7 +754,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/git.svg",
+        "icon": "https://api.iconify.design/logos:git-icon.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -786,7 +786,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/gitlab.svg",
+        "icon": "https://api.iconify.design/logos:gitlab.svg",
         "requires_secrets": [
           {
             "key": "GITLAB_PERSONAL_ACCESS_TOKEN",
@@ -827,7 +827,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/stripe.svg",
+        "icon": "https://api.iconify.design/logos:stripe.svg",
         "requires_secrets": [
           {
             "key": "STRIPE_SECRET_KEY",
@@ -865,7 +865,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/puppeteer.svg",
+        "icon": "https://api.iconify.design/logos:puppeteer.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -897,7 +897,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/playwright.svg",
+        "icon": "https://api.iconify.design/logos:playwright.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -929,7 +929,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sqlite.svg",
+        "icon": "https://api.iconify.design/logos:sqlite.svg",
         "requires_secrets": [
           {
             "key": "SQLITE_DB_PATH",
@@ -966,7 +966,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/brave.svg",
+        "icon": "https://api.iconify.design/logos:brave.svg",
         "requires_secrets": [
           {
             "key": "BRAVE_API_KEY",
@@ -1004,7 +1004,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://www.tavily.com/favicon.ico",
+        "icon": "https://api.iconify.design/mdi:web.svg",
         "requires_secrets": [
           {
             "key": "TAVILY_API_KEY",
@@ -1042,7 +1042,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/internetexplorer.svg",
+        "icon": "https://api.iconify.design/mdi:web.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -1074,7 +1074,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/perplexity.svg",
+        "icon": "https://api.iconify.design/mdi:brain.svg",
         "requires_secrets": [
           {
             "key": "PERPLEXITY_API_KEY",
@@ -1112,7 +1112,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googledrive.svg",
+        "icon": "https://api.iconify.design/logos:google-drive.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -1144,7 +1144,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googlecalendar.svg",
+        "icon": "https://api.iconify.design/logos:google-calendar.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -1176,7 +1176,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/gmail.svg",
+        "icon": "https://api.iconify.design/logos:google-gmail.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -1208,7 +1208,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/googlemaps.svg",
+        "icon": "https://api.iconify.design/logos:google-maps.svg",
         "requires_secrets": [
           {
             "key": "GOOGLE_MAPS_API_KEY",
@@ -1246,7 +1246,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/discord.svg",
+        "icon": "https://api.iconify.design/logos:discord-icon.svg",
         "requires_secrets": [
           {
             "key": "DISCORD_TOKEN",
@@ -1284,7 +1284,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/twilio.svg",
+        "icon": "https://api.iconify.design/logos:twilio-icon.svg",
         "requires_secrets": [
           {
             "key": "TWILIO_ACCOUNT_SID",
@@ -1325,7 +1325,7 @@
         "tags": [
           "infrastructure"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sendgrid.svg",
+        "icon": "https://api.iconify.design/logos:sendgrid-icon.svg",
         "requires_secrets": [
           {
             "key": "SENDGRID_API_KEY",
@@ -1363,7 +1363,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/jira.svg",
+        "icon": "https://api.iconify.design/logos:jira.svg",
         "requires_secrets": [
           {
             "key": "JIRA_HOST",
@@ -1409,7 +1409,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/asana.svg",
+        "icon": "https://api.iconify.design/logos:asana-icon.svg",
         "requires_secrets": [
           {
             "key": "ASANA_TOKEN",
@@ -1447,7 +1447,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://avatars.githubusercontent.com/u/54333248?s=200&v=4",
+        "icon": "https://api.iconify.design/logos:pinecone.svg",
         "requires_secrets": [
           {
             "key": "PINECONE_API_KEY",
@@ -1489,7 +1489,7 @@
         "tags": [
           "data"
         ],
-        "icon": "https://avatars.githubusercontent.com/u/37794290?s=200&v=4",
+        "icon": "https://api.iconify.design/mdi:graph-outline.svg",
         "requires_secrets": [
           {
             "key": "WEAVIATE_URL",
@@ -1530,7 +1530,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/openai.svg",
+        "icon": "https://api.iconify.design/logos:openai-icon.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 1,
@@ -1562,7 +1562,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/codereview.svg",
+        "icon": "https://api.iconify.design/mdi:source-pull.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 0,
@@ -1594,7 +1594,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/testinglibrary.svg",
+        "icon": "https://api.iconify.design/mdi:test-tube.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 0,
@@ -1626,7 +1626,7 @@
         "tags": [
           "productivity"
         ],
-        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/git.svg",
+        "icon": "https://api.iconify.design/logos:git-icon.svg",
         "requires_secrets": [],
         "declares": {
           "mcp_servers": 0,

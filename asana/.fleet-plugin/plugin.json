@@ -14,7 +14,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/asana.svg",
+  "icon": "https://api.iconify.design/logos:asana-icon.svg",
   "requires_secrets": [
     {
       "key": "ASANA_TOKEN",

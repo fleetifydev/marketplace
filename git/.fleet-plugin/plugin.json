@@ -14,7 +14,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/git.svg",
+  "icon": "https://api.iconify.design/logos:git-icon.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

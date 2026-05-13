@@ -14,7 +14,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/amazonwebservices.svg",
+  "icon": "https://api.iconify.design/logos:aws.svg",
   "requires_secrets": [
     {
       "key": "AWS_ACCESS_KEY_ID",

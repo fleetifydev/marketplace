@@ -14,7 +14,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/snowflake.svg",
+  "icon": "https://api.iconify.design/mdi:snowflake.svg",
   "requires_secrets": [
     {
       "key": "SNOWFLAKE_ACCOUNT",

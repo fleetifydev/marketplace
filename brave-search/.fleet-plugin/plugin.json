@@ -14,7 +14,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/brave.svg",
+  "icon": "https://api.iconify.design/logos:brave.svg",
   "requires_secrets": [
     {
       "key": "BRAVE_API_KEY",

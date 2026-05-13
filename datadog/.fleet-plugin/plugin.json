@@ -15,7 +15,7 @@
     "data",
     "infrastructure"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/datadog.svg",
+  "icon": "https://api.iconify.design/logos:datadog.svg",
   "requires_secrets": [
     {
       "key": "DD_API_KEY",

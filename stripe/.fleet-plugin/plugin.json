@@ -14,7 +14,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/stripe.svg",
+  "icon": "https://api.iconify.design/logos:stripe.svg",
   "requires_secrets": [
     {
       "key": "STRIPE_SECRET_KEY",

@@ -14,7 +14,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://www.tavily.com/favicon.ico",
+  "icon": "https://api.iconify.design/mdi:web.svg",
   "requires_secrets": [
     {
       "key": "TAVILY_API_KEY",

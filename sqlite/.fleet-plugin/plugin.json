@@ -14,7 +14,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/sqlite.svg",
+  "icon": "https://api.iconify.design/logos:sqlite.svg",
   "requires_secrets": [
     {
       "key": "SQLITE_DB_PATH",

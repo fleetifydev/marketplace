@@ -14,7 +14,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/mongodb.svg",
+  "icon": "https://api.iconify.design/logos:mongodb-icon.svg",
   "requires_secrets": [
     {
       "key": "MONGODB_URI",

@@ -14,7 +14,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/cloudflare.svg",
+  "icon": "https://api.iconify.design/logos:cloudflare.svg",
   "requires_secrets": [
     {
       "key": "CLOUDFLARE_API_TOKEN",

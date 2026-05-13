@@ -15,7 +15,7 @@
     "data",
     "infrastructure"
   ],
-  "icon": "https://www.postgresql.org/media/img/about/press/elephant.png",
+  "icon": "https://api.iconify.design/logos:postgresql.svg",
   "requires_secrets": [
     {
       "key": "POSTGRES_URL",
