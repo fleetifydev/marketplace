@@ -1,0 +1,50 @@
+{
+  "name": "asana",
+  "display_name": "Asana",
+  "version": "0.1.0",
+  "description": "Browse projects, tasks, and teams. Update task status from chat.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://api.iconify.design/logos:asana-icon.svg",
+  "requires_secrets": [
+    {
+      "key": "ASANA_TOKEN",
+      "label": "Asana Personal Access Token",
+      "url": "https://app.asana.com/0/my-apps"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/asana",
+  "license": "MIT"
+}

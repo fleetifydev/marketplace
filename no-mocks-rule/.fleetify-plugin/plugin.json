@@ -1,0 +1,44 @@
+{
+  "name": "no-mocks-rule",
+  "display_name": "No Mocks Rule",
+  "version": "0.1.0",
+  "description": "System-prompt rule forbidding mocks in integration tests; agents must hit a real test DB.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://api.iconify.design/mdi:test-tube.svg",
+  "requires_secrets": [],
+  "declares": {
+    "mcp_servers": 0,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/no-mocks-rule",
+  "license": "MIT"
+}

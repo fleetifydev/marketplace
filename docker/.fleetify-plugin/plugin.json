@@ -1,0 +1,44 @@
+{
+  "name": "docker",
+  "display_name": "Docker",
+  "version": "0.1.0",
+  "description": "List containers, inspect images, tail logs \u2014 local Docker daemon over the socket.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "infrastructure"
+  ],
+  "icon": "https://api.iconify.design/logos:docker-icon.svg",
+  "requires_secrets": [],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/docker",
+  "license": "MIT"
+}

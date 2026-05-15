@@ -1,0 +1,50 @@
+{
+  "name": "linear",
+  "display_name": "Linear",
+  "version": "0.1.0",
+  "description": "Browse issues, projects, and cycles. Create + update Linear issues from chat.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://api.iconify.design/logos:linear-icon.svg",
+  "requires_secrets": [
+    {
+      "key": "LINEAR_API_KEY",
+      "label": "Linear API key",
+      "url": "https://linear.app/settings/api"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/linear",
+  "license": "MIT"
+}

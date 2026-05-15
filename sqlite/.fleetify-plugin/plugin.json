@@ -1,0 +1,49 @@
+{
+  "name": "sqlite",
+  "display_name": "SQLite",
+  "version": "0.1.0",
+  "description": "Local SQLite client: query schemas, run SELECT, inspect indexes.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "data"
+  ],
+  "icon": "https://api.iconify.design/logos:sqlite.svg",
+  "requires_secrets": [
+    {
+      "key": "SQLITE_DB_PATH",
+      "label": "Absolute path to the .db file"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/sqlite",
+  "license": "MIT"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "supabase",
+  "display_name": "Supabase",
+  "version": "0.1.0",
+  "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "infrastructure",
+    "data"
+  ],
+  "icon": "https://api.iconify.design/logos:supabase-icon.svg",
+  "requires_secrets": [
+    {
+      "key": "SUPABASE_URL",
+      "label": "Project URL"
+    },
+    {
+      "key": "SUPABASE_KEY",
+      "label": "Service role key",
+      "url": "https://supabase.com/dashboard/project/_/settings/api"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/supabase",
+  "license": "MIT"
+}

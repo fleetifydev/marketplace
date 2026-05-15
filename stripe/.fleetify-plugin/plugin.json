@@ -1,0 +1,50 @@
+{
+  "name": "stripe",
+  "display_name": "Stripe",
+  "version": "0.1.0",
+  "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "infrastructure"
+  ],
+  "icon": "https://api.iconify.design/logos:stripe.svg",
+  "requires_secrets": [
+    {
+      "key": "STRIPE_SECRET_KEY",
+      "label": "Stripe secret key (sk_\u2026)",
+      "url": "https://dashboard.stripe.com/apikeys"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/stripe",
+  "license": "MIT"
+}

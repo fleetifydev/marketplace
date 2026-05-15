@@ -1,0 +1,50 @@
+{
+  "name": "figma",
+  "display_name": "Figma",
+  "version": "0.1.0",
+  "description": "Read frames, components, and design tokens from any Figma file.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://api.iconify.design/logos:figma.svg",
+  "requires_secrets": [
+    {
+      "key": "FIGMA_TOKEN",
+      "label": "Figma personal access token",
+      "url": "https://www.figma.com/developers/api#access-tokens"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/figma",
+  "license": "MIT"
+}

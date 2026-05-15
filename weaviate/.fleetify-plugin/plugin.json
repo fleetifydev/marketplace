@@ -1,0 +1,53 @@
+{
+  "name": "weaviate",
+  "display_name": "Weaviate",
+  "version": "0.1.0",
+  "description": "Weaviate vector DB \u2014 hybrid search, generative modules, semantic queries.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "data"
+  ],
+  "icon": "https://api.iconify.design/mdi:graph-outline.svg",
+  "requires_secrets": [
+    {
+      "key": "WEAVIATE_URL",
+      "label": "Weaviate endpoint URL"
+    },
+    {
+      "key": "WEAVIATE_API_KEY",
+      "label": "Weaviate API key"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/weaviate",
+  "license": "MIT"
+}

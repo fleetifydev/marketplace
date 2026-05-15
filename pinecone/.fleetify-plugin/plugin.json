@@ -1,0 +1,54 @@
+{
+  "name": "pinecone",
+  "display_name": "Pinecone",
+  "version": "0.1.0",
+  "description": "Pinecone vector DB \u2014 query, upsert, manage indexes.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "data"
+  ],
+  "icon": "https://api.iconify.design/logos:pinecone.svg",
+  "requires_secrets": [
+    {
+      "key": "PINECONE_API_KEY",
+      "label": "Pinecone API key",
+      "url": "https://app.pinecone.io"
+    },
+    {
+      "key": "PINECONE_INDEX",
+      "label": "Default index name"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/pinecone",
+  "license": "MIT"
+}

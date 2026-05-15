@@ -1,0 +1,50 @@
+{
+  "name": "tavily",
+  "display_name": "Tavily",
+  "version": "0.1.0",
+  "description": "LLM-tuned search API: clean snippets, recency-ranked, cite-able.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://api.iconify.design/mdi:web.svg",
+  "requires_secrets": [
+    {
+      "key": "TAVILY_API_KEY",
+      "label": "Tavily API key",
+      "url": "https://tavily.com"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/tavily",
+  "license": "MIT"
+}

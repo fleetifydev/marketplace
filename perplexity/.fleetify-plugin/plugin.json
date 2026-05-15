@@ -1,0 +1,50 @@
+{
+  "name": "perplexity",
+  "display_name": "Perplexity",
+  "version": "0.1.0",
+  "description": "Perplexity Sonar API \u2014 multi-step web answers with inline citations.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "productivity"
+  ],
+  "icon": "https://api.iconify.design/mdi:brain.svg",
+  "requires_secrets": [
+    {
+      "key": "PERPLEXITY_API_KEY",
+      "label": "Perplexity API key",
+      "url": "https://www.perplexity.ai/settings/api"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/perplexity",
+  "license": "MIT"
+}

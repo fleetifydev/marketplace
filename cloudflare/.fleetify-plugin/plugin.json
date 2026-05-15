@@ -1,0 +1,50 @@
+{
+  "name": "cloudflare",
+  "display_name": "Cloudflare",
+  "version": "0.1.0",
+  "description": "Manage Workers, KV, R2, DNS records \u2014 Cloudflare's official MCP.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "infrastructure"
+  ],
+  "icon": "https://api.iconify.design/logos:cloudflare.svg",
+  "requires_secrets": [
+    {
+      "key": "CLOUDFLARE_API_TOKEN",
+      "label": "Cloudflare API token",
+      "url": "https://dash.cloudflare.com/profile/api-tokens"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/cloudflare",
+  "license": "MIT"
+}

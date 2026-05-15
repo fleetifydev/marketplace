@@ -1,0 +1,53 @@
+{
+  "name": "twilio",
+  "display_name": "Twilio",
+  "version": "0.1.0",
+  "description": "Send SMS, place voice calls, manage Twilio phone numbers.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "infrastructure"
+  ],
+  "icon": "https://api.iconify.design/logos:twilio-icon.svg",
+  "requires_secrets": [
+    {
+      "key": "TWILIO_ACCOUNT_SID",
+      "label": "Account SID"
+    },
+    {
+      "key": "TWILIO_AUTH_TOKEN",
+      "label": "Auth token"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/twilio",
+  "license": "MIT"
+}

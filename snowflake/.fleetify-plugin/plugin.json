@@ -1,0 +1,57 @@
+{
+  "name": "snowflake",
+  "display_name": "Snowflake",
+  "version": "0.1.0",
+  "description": "Run SQL against Snowflake warehouses, inspect schemas and warehouses.",
+  "author": {
+    "name": "Fleetify",
+    "url": "https://github.com/fleetify"
+  },
+  "providers": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "tags": [
+    "data"
+  ],
+  "icon": "https://api.iconify.design/mdi:snowflake.svg",
+  "requires_secrets": [
+    {
+      "key": "SNOWFLAKE_ACCOUNT",
+      "label": "Account identifier"
+    },
+    {
+      "key": "SNOWFLAKE_USER",
+      "label": "Username"
+    },
+    {
+      "key": "SNOWFLAKE_PASSWORD",
+      "label": "Password"
+    }
+  ],
+  "declares": {
+    "mcp_servers": 1,
+    "templates": 0,
+    "workflows": 0,
+    "providers": {
+      "claude": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "codex": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      },
+      "gemini": {
+        "skills": 0,
+        "commands": 0,
+        "hooks": 0
+      }
+    }
+  },
+  "homepage": "https://github.com/fleetify/marketplace/tree/main/snowflake",
+  "license": "MIT"
+}

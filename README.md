@@ -1,7 +1,7 @@
 # Fleetify Marketplace
 
 The official Fleet plugin catalog. Every plugin here ships as a sub-
-directory with a `.fleet-plugin/plugin.json` manifest. The top-level
+directory with a `.fleetify-plugin/plugin.json` manifest. The top-level
 `marketplace.json` indexes the lot — Fleet's desktop app reads this
 file (anonymously from GitHub raw) and renders each card in **Browse**.
 
@@ -17,7 +17,7 @@ file (anonymously from GitHub raw) and renders each card in **Browse**.
 
 1. Fork this repo.
 2. Add a new top-level folder `<your-plugin>/`.
-3. Inside, drop a `.fleet-plugin/plugin.json` (see any existing plugin
+3. Inside, drop a `.fleetify-plugin/plugin.json` (see any existing plugin
    for the schema) and the component files (`mcp.json`, `skills/`,
    `templates/`, etc).
 4. Add an entry to `marketplace.json` under `plugins[]`.
