@@ -5,7 +5,7 @@
   "description": "List, read, and search Google Drive files. OAuth-based, read-only by default.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

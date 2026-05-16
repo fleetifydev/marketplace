@@ -5,7 +5,7 @@
   "description": "Subagent template that audits diffs for safety, style, and missing tests.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

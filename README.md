@@ -64,7 +64,7 @@ The minimum viable `.fleetify-plugin/plugin.json`:
   "display_name": "GitHub",
   "version": "0.1.0",
   "description": "Read issues, PRs, file contents, and search any GitHub repo.",
-  "author": { "name": "Fleetify", "url": "https://github.com/fleetify" },
+  "author": { "name": "Fleetify", "url": "https://github.com/fleetifydev" },
   "providers": ["claude", "codex", "gemini"],
   "tags": ["productivity", "infrastructure"],
   "icon": "https://api.iconify.design/logos:github-icon.svg",

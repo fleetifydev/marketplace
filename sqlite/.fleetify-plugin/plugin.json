@@ -5,7 +5,7 @@
   "description": "Local SQLite client: query schemas, run SELECT, inspect indexes.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

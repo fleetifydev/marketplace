@@ -5,7 +5,7 @@
   "description": "Read + update Jira tickets, sprints, and projects across Atlassian Cloud.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

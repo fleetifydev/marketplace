@@ -5,7 +5,7 @@
   "description": "Browse issues, projects, and cycles. Create + update Linear issues from chat.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

@@ -5,7 +5,7 @@
   "description": "Perplexity Sonar API \u2014 multi-step web answers with inline citations.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

@@ -5,7 +5,7 @@
   "description": "List containers, inspect images, tail logs \u2014 local Docker daemon over the socket.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

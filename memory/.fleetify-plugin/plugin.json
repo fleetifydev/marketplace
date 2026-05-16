@@ -5,7 +5,7 @@
   "description": "Persistent knowledge-graph memory: entities, relations, and observations across sessions.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

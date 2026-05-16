@@ -5,7 +5,7 @@
   "description": "Weaviate vector DB \u2014 hybrid search, generative modules, semantic queries.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

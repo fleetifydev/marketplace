@@ -5,7 +5,7 @@
   "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

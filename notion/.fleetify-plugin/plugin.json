@@ -5,7 +5,7 @@
   "description": "Read + write Notion pages, databases, and blocks straight from chat.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

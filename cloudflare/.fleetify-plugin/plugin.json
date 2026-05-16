@@ -5,7 +5,7 @@
   "description": "Manage Workers, KV, R2, DNS records \u2014 Cloudflare's official MCP.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

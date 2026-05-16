@@ -5,7 +5,7 @@
   "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

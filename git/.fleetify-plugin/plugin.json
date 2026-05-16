@@ -5,7 +5,7 @@
   "description": "Local git operations \u2014 diff, log, blame, branch \u2014 without leaving chat.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

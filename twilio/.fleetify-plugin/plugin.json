@@ -5,7 +5,7 @@
   "description": "Send SMS, place voice calls, manage Twilio phone numbers.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

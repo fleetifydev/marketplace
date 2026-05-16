@@ -5,7 +5,7 @@
   "description": "Read frames, components, and design tokens from any Figma file.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

@@ -5,7 +5,7 @@
   "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

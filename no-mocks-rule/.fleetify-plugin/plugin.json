@@ -5,7 +5,7 @@
   "description": "System-prompt rule forbidding mocks in integration tests; agents must hit a real test DB.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

@@ -5,7 +5,7 @@
   "description": "Browse error groups, fetch stack traces, triage issues from Sentry.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

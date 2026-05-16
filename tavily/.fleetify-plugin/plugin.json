@@ -5,7 +5,7 @@
   "description": "LLM-tuned search API: clean snippets, recency-ranked, cite-able.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

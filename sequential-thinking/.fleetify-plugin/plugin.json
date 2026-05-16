@@ -5,7 +5,7 @@
   "description": "MCP server that prompts the agent to break a problem into numbered steps and revise mid-flight.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

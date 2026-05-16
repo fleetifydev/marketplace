@@ -5,7 +5,7 @@
   "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

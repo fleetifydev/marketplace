@@ -5,7 +5,7 @@
   "description": "Query, inspect schemas, run EXPLAIN \u2014 read-only Postgres MCP.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

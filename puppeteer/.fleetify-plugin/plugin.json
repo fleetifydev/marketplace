@@ -5,7 +5,7 @@
   "description": "Headless-Chrome browser control: navigate, click, screenshot, extract text.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

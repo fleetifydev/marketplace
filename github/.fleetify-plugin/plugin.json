@@ -5,7 +5,7 @@
   "description": "Read issues, PRs, file contents, and search across any GitHub repo the agent has access to.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

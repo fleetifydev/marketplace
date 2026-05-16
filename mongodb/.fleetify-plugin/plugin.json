@@ -5,7 +5,7 @@
   "description": "Connect to MongoDB clusters: list collections, run aggregations, inspect indexes.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

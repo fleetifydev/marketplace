@@ -5,7 +5,7 @@
   "description": "List deployments, inspect builds, fetch logs from your Vercel projects.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",

@@ -5,7 +5,7 @@
   "description": "Inspect AWS resources \u2014 EC2, S3, Lambda, IAM \u2014 with read-only credentials.",
   "author": {
     "name": "Fleetify",
-    "url": "https://github.com/fleetify"
+    "url": "https://github.com/fleetifydev"
   },
   "providers": [
     "claude",
