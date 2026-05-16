@@ -73,7 +73,7 @@ The minimum viable `.fleetify-plugin/plugin.json`:
       "url": "https://github.com/settings/tokens" }
   ],
   "declares": { ... },
-  "homepage": "https://github.com/fleetify/marketplace/tree/main/github",
+  "homepage": "https://github.com/fleetifydev/marketplace/tree/main/github",
   "license": "MIT"
 }
 ```

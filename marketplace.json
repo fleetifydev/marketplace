@@ -1,7 +1,7 @@
 {
-  "name": "Fleet Official",
+  "name": "Fleetitfy Official",
   "description": "Curated plugins by the Fleetify team. Browse, install, and configure standard integrations for every Fleet session.",
-  "homepage": "https://github.com/fleetify/marketplace",
+  "homepage": "https://github.com/fleetifydev/marketplace",
   "icon": "icon.png",
   "plugins": [
     {
@@ -14,7 +14,7 @@
         "description": "Read issues, PRs, file contents, and search across any GitHub repo the agent has access to.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -55,7 +55,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/github",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/github",
         "license": "MIT"
       }
     },
@@ -69,7 +69,7 @@
         "description": "Query, inspect schemas, run EXPLAIN \u2014 read-only Postgres MCP.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -110,7 +110,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/postgres",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/postgres",
         "license": "MIT"
       }
     },
@@ -124,7 +124,7 @@
         "description": "Read channel history, post messages, manage Slack from any agent.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -169,7 +169,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/slack",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/slack",
         "license": "MIT"
       }
     },
@@ -183,7 +183,7 @@
         "description": "Browse issues, projects, and cycles. Create + update Linear issues from chat.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -223,7 +223,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/linear",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/linear",
         "license": "MIT"
       }
     },
@@ -237,7 +237,7 @@
         "description": "Read + write Notion pages, databases, and blocks straight from chat.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -277,7 +277,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/notion",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/notion",
         "license": "MIT"
       }
     },
@@ -291,7 +291,7 @@
         "description": "Read frames, components, and design tokens from any Figma file.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -331,7 +331,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/figma",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/figma",
         "license": "MIT"
       }
     },
@@ -345,7 +345,7 @@
         "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -380,7 +380,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/filesystem",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/filesystem",
         "license": "MIT"
       }
     },
@@ -394,7 +394,7 @@
         "description": "Persistent knowledge-graph memory: entities, relations, and observations across sessions.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -428,7 +428,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/memory",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/memory",
         "license": "MIT"
       }
     },
@@ -442,7 +442,7 @@
         "description": "Inspect AWS resources \u2014 EC2, S3, Lambda, IAM \u2014 with read-only credentials.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -489,7 +489,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/aws",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/aws",
         "license": "MIT"
       }
     },
@@ -503,7 +503,7 @@
         "description": "Manage Workers, KV, R2, DNS records \u2014 Cloudflare's official MCP.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -543,7 +543,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/cloudflare",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/cloudflare",
         "license": "MIT"
       }
     },
@@ -557,7 +557,7 @@
         "description": "List deployments, inspect builds, fetch logs from your Vercel projects.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -597,7 +597,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/vercel",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/vercel",
         "license": "MIT"
       }
     },
@@ -611,7 +611,7 @@
         "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -656,7 +656,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/supabase",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/supabase",
         "license": "MIT"
       }
     },
@@ -670,7 +670,7 @@
         "description": "List containers, inspect images, tail logs \u2014 local Docker daemon over the socket.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -704,7 +704,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/docker",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/docker",
         "license": "MIT"
       }
     },
@@ -718,7 +718,7 @@
         "description": "Inspect pods, services, deployments via your current kubectl context.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -752,7 +752,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/kubernetes",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/kubernetes",
         "license": "MIT"
       }
     },
@@ -766,7 +766,7 @@
         "description": "Query metrics, search logs, browse dashboards from Datadog.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -814,7 +814,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/datadog",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/datadog",
         "license": "MIT"
       }
     },
@@ -828,7 +828,7 @@
         "description": "Browse error groups, fetch stack traces, triage issues from Sentry.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -868,7 +868,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/sentry",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sentry",
         "license": "MIT"
       }
     },
@@ -882,7 +882,7 @@
         "description": "Connect to MongoDB clusters: list collections, run aggregations, inspect indexes.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -921,7 +921,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/mongodb",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/mongodb",
         "license": "MIT"
       }
     },
@@ -935,7 +935,7 @@
         "description": "Read-only Redis client: keys, hashes, lists, sorted-sets inspection.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -974,7 +974,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/redis",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/redis",
         "license": "MIT"
       }
     },
@@ -988,7 +988,7 @@
         "description": "Run SQL against Snowflake warehouses, inspect schemas and warehouses.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1035,7 +1035,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/snowflake",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/snowflake",
         "license": "MIT"
       }
     },
@@ -1049,7 +1049,7 @@
         "description": "Local git operations \u2014 diff, log, blame, branch \u2014 without leaving chat.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1083,7 +1083,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/git",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/git",
         "license": "MIT"
       }
     },
@@ -1097,7 +1097,7 @@
         "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1140,7 +1140,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/gitlab",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/gitlab",
         "license": "MIT"
       }
     },
@@ -1154,7 +1154,7 @@
         "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1194,7 +1194,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/stripe",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/stripe",
         "license": "MIT"
       }
     },
@@ -1208,7 +1208,7 @@
         "description": "Headless-Chrome browser control: navigate, click, screenshot, extract text.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1242,7 +1242,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/puppeteer",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/puppeteer",
         "license": "MIT"
       }
     },
@@ -1256,7 +1256,7 @@
         "description": "Cross-browser automation (Chromium / Firefox / WebKit) for tests and scraping.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1290,7 +1290,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/playwright",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/playwright",
         "license": "MIT"
       }
     },
@@ -1304,7 +1304,7 @@
         "description": "Local SQLite client: query schemas, run SELECT, inspect indexes.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1343,7 +1343,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/sqlite",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sqlite",
         "license": "MIT"
       }
     },
@@ -1357,7 +1357,7 @@
         "description": "Anonymous web + local search via Brave's API. Default goto for grounded research.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1397,7 +1397,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/brave-search",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/brave-search",
         "license": "MIT"
       }
     },
@@ -1411,7 +1411,7 @@
         "description": "LLM-tuned search API: clean snippets, recency-ranked, cite-able.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1451,7 +1451,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/tavily",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/tavily",
         "license": "MIT"
       }
     },
@@ -1465,7 +1465,7 @@
         "description": "Plain HTTP fetcher: get any URL and return cleaned text, no auth required.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1499,7 +1499,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/fetch",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/fetch",
         "license": "MIT"
       }
     },
@@ -1513,7 +1513,7 @@
         "description": "Perplexity Sonar API \u2014 multi-step web answers with inline citations.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1553,7 +1553,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/perplexity",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/perplexity",
         "license": "MIT"
       }
     },
@@ -1567,7 +1567,7 @@
         "description": "List, read, and search Google Drive files. OAuth-based, read-only by default.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1601,7 +1601,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/google-drive",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-drive",
         "license": "MIT"
       }
     },
@@ -1615,7 +1615,7 @@
         "description": "Read events, create + update Calendar entries across your Google calendars.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1649,7 +1649,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/google-calendar",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-calendar",
         "license": "MIT"
       }
     },
@@ -1663,7 +1663,7 @@
         "description": "Read inbox, draft + send messages, manage labels via Gmail's API.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1697,7 +1697,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/gmail",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/gmail",
         "license": "MIT"
       }
     },
@@ -1711,7 +1711,7 @@
         "description": "Geocode addresses, get directions, search nearby places.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1751,7 +1751,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/google-maps",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-maps",
         "license": "MIT"
       }
     },
@@ -1765,7 +1765,7 @@
         "description": "Bot-level Discord operations: read channels, post messages, manage roles.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1805,7 +1805,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/discord",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/discord",
         "license": "MIT"
       }
     },
@@ -1819,7 +1819,7 @@
         "description": "Send SMS, place voice calls, manage Twilio phone numbers.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1862,7 +1862,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/twilio",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/twilio",
         "license": "MIT"
       }
     },
@@ -1876,7 +1876,7 @@
         "description": "Send transactional + marketing email via SendGrid.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1916,7 +1916,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/sendgrid",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sendgrid",
         "license": "MIT"
       }
     },
@@ -1930,7 +1930,7 @@
         "description": "Read + update Jira tickets, sprints, and projects across Atlassian Cloud.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -1978,7 +1978,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/jira",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/jira",
         "license": "MIT"
       }
     },
@@ -1992,7 +1992,7 @@
         "description": "Browse projects, tasks, and teams. Update task status from chat.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2032,7 +2032,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/asana",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/asana",
         "license": "MIT"
       }
     },
@@ -2046,7 +2046,7 @@
         "description": "Pinecone vector DB \u2014 query, upsert, manage indexes.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2090,7 +2090,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/pinecone",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/pinecone",
         "license": "MIT"
       }
     },
@@ -2104,7 +2104,7 @@
         "description": "Weaviate vector DB \u2014 hybrid search, generative modules, semantic queries.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2147,7 +2147,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/weaviate",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/weaviate",
         "license": "MIT"
       }
     },
@@ -2161,7 +2161,7 @@
         "description": "MCP server that prompts the agent to break a problem into numbered steps and revise mid-flight.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2195,7 +2195,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/sequential-thinking",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sequential-thinking",
         "license": "MIT"
       }
     },
@@ -2209,7 +2209,7 @@
         "description": "Subagent template that audits diffs for safety, style, and missing tests.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2243,7 +2243,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/code-reviewer",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/code-reviewer",
         "license": "MIT"
       }
     },
@@ -2257,7 +2257,7 @@
         "description": "System-prompt rule forbidding mocks in integration tests; agents must hit a real test DB.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2291,7 +2291,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/no-mocks-rule",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/no-mocks-rule",
         "license": "MIT"
       }
     },
@@ -2305,7 +2305,7 @@
         "description": "Skill that turns `git diff` output into a tight PR-ready summary.",
         "author": {
           "name": "Fleetify",
-          "url": "https://github.com/fleetify"
+          "url": "https://github.com/fleetifydev"
         },
         "providers": [
           "claude",
@@ -2339,7 +2339,7 @@
             }
           }
         },
-        "homepage": "https://github.com/fleetify/marketplace/tree/main/diff-summarizer",
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/diff-summarizer",
         "license": "MIT"
       }
     }
