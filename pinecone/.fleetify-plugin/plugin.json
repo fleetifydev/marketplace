@@ -39,7 +39,7 @@
       },
       "codex": {
         "skills": 0,
-        "commands": 0,
+        "prompts": 0,
         "hooks": 0
       },
       "gemini": {

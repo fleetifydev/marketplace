@@ -45,14 +45,14 @@ declares counts.
 ├── workflows/               ← cross-provider workflow definitions
 ├── .claude/                 ← Claude-only skills / commands / hooks
 ├── .gemini/                 ← Gemini-only skills / commands / hooks
-└── .codex/                  ← Codex-only skills / hooks (no commands)
+└── .codex/                  ← Codex-only skills / prompts / hooks
 ```
 
 Cross-cutting components (`mcp.json`, `templates/`, `workflows/`) live
 at the root because they work on every provider. Per-provider
 components live under `.claude/`, `.gemini/`, `.codex/` and the Fleet
 installer materializes them into each provider's native paths
-(`~/.claude/skills/`, `~/.gemini/commands/`, `~/.codex/hooks.json`, …).
+(`~/.claude/skills/`, `~/.gemini/commands/`, `~/.codex/prompts/`, …).
 
 ## Manifest schema
 
@@ -109,7 +109,7 @@ files touch disk:
   "workflows": 0,
   "providers": {
     "claude": { "skills": 0, "commands": 0, "hooks": 0 },
-    "codex":  { "skills": 0, "commands": 0, "hooks": 0 },
+    "codex":  { "skills": 0, "prompts": 0, "hooks": 0 },
     "gemini": { "skills": 0, "commands": 0, "hooks": 0 }
   }
 }
@@ -117,17 +117,14 @@ files touch disk:
 
 Cross-cutting components (`mcp_servers`, `templates`, `workflows`) sit
 at the root because they install once per plugin. Per-provider
-components (`skills`, `commands`, `hooks`) nest under
-`declares.providers.<provider>` because the same plugin can ship
-different counts per provider — for example, Claude-tier skills only.
+components nest under `declares.providers.<provider>` because the same
+plugin can ship different counts per provider — for example,
+Claude-tier skills only. Claude and Gemini use `commands`; Codex uses
+`prompts` to match its native `~/.codex/prompts/` directory.
 
 The Fleet installer cross-checks declared counts against the on-disk
 files at install time. Mismatches reject the install with a 422 so
 broken manifests never enter the registry.
-
-> **Note:** `providers.codex.commands` must be `0`. Codex custom
-> prompts are deprecated upstream — ship Codex commands as skills
-> instead.
 
 ## `marketplace.json`
 
