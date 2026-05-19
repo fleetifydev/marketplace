@@ -34,6 +34,7 @@
     "mcp_servers": 1,
     "templates": 0,
     "workflows": 0,
+    "prompts": 0,
     "providers": {
       "claude": {
         "skills": 0,
@@ -42,7 +43,6 @@
       },
       "codex": {
         "skills": 0,
-        "prompts": 0,
         "hooks": 0
       },
       "gemini": {
