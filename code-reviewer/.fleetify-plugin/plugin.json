@@ -15,6 +15,9 @@
   "tags": [
     "productivity"
   ],
+  "provides": [
+    "subagents"
+  ],
   "icon": "https://api.iconify.design/mdi:source-pull.svg",
   "requires_secrets": [],
   "declares": {

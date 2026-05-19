@@ -16,6 +16,9 @@
     "productivity",
     "infrastructure"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:github-icon.svg",
   "requires_secrets": [
     {

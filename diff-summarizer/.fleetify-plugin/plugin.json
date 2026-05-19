@@ -15,6 +15,9 @@
   "tags": [
     "productivity"
   ],
+  "provides": [
+    "skills"
+  ],
   "icon": "https://api.iconify.design/logos:git-icon.svg",
   "requires_secrets": [],
   "declares": {

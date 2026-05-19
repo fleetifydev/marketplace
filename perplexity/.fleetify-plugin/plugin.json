@@ -2,7 +2,7 @@
   "name": "perplexity",
   "display_name": "Perplexity",
   "version": "0.1.0",
-  "description": "Perplexity Sonar API \u2014 multi-step web answers with inline citations.",
+  "description": "Perplexity Sonar API — multi-step web answers with inline citations.",
   "author": {
     "name": "Fleetify",
     "url": "https://github.com/fleetifydev"
@@ -14,6 +14,9 @@
   ],
   "tags": [
     "productivity"
+  ],
+  "provides": [
+    "mcp"
   ],
   "icon": "https://api.iconify.design/mdi:brain.svg",
   "requires_secrets": [

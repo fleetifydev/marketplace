@@ -16,6 +16,9 @@
     "data",
     "infrastructure"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:datadog.svg",
   "requires_secrets": [
     {
@@ -28,7 +31,7 @@
     },
     {
       "key": "DD_SITE",
-      "label": "Datadog site (datadoghq.com / datadoghq.eu / \u2026)"
+      "label": "Datadog site (datadoghq.com / datadoghq.eu / …)"
     }
   ],
   "declares": {

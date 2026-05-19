@@ -15,6 +15,9 @@
   "tags": [
     "productivity"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:discord-icon.svg",
   "requires_secrets": [
     {

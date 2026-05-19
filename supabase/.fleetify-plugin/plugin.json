@@ -16,6 +16,9 @@
     "infrastructure",
     "data"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:supabase-icon.svg",
   "requires_secrets": [
     {

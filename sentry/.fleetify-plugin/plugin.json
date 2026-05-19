@@ -15,6 +15,9 @@
   "tags": [
     "data"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:sentry-icon.svg",
   "requires_secrets": [
     {

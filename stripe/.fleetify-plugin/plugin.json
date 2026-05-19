@@ -15,11 +15,14 @@
   "tags": [
     "infrastructure"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:stripe.svg",
   "requires_secrets": [
     {
       "key": "STRIPE_SECRET_KEY",
-      "label": "Stripe secret key (sk_\u2026)",
+      "label": "Stripe secret key (sk_…)",
       "url": "https://dashboard.stripe.com/apikeys"
     }
   ],

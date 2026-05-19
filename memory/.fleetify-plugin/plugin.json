@@ -15,6 +15,9 @@
   "tags": [
     "productivity"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/mdi:database.svg",
   "requires_secrets": [],
   "declares": {

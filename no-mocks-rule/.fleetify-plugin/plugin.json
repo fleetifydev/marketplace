@@ -15,6 +15,9 @@
   "tags": [
     "productivity"
   ],
+  "provides": [
+    "skills"
+  ],
   "icon": "https://api.iconify.design/mdi:test-tube.svg",
   "requires_secrets": [],
   "declares": {

@@ -2,7 +2,7 @@
   "name": "postgres",
   "display_name": "PostgreSQL",
   "version": "0.1.0",
-  "description": "Query, inspect schemas, run EXPLAIN \u2014 read-only Postgres MCP.",
+  "description": "Query, inspect schemas, run EXPLAIN — read-only Postgres MCP.",
   "author": {
     "name": "Fleetify",
     "url": "https://github.com/fleetifydev"
@@ -15,6 +15,9 @@
   "tags": [
     "data",
     "infrastructure"
+  ],
+  "provides": [
+    "mcp"
   ],
   "icon": "https://api.iconify.design/logos:postgresql.svg",
   "requires_secrets": [

@@ -25,6 +25,9 @@
           "productivity",
           "infrastructure"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:github-icon.svg",
         "requires_secrets": [
           {
@@ -66,7 +69,7 @@
         "name": "postgres",
         "display_name": "PostgreSQL",
         "version": "0.1.0",
-        "description": "Query, inspect schemas, run EXPLAIN \u2014 read-only Postgres MCP.",
+        "description": "Query, inspect schemas, run EXPLAIN — read-only Postgres MCP.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -79,6 +82,9 @@
         "tags": [
           "data",
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:postgresql.svg",
         "requires_secrets": [
@@ -134,16 +140,19 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:slack-icon.svg",
         "requires_secrets": [
           {
             "key": "SLACK_BOT_TOKEN",
-            "label": "Slack Bot Token (xoxb-\u2026)",
+            "label": "Slack Bot Token (xoxb-…)",
             "url": "https://api.slack.com/apps"
           },
           {
             "key": "SLACK_TEAM_ID",
-            "label": "Slack Team ID (T\u2026)",
+            "label": "Slack Team ID (T…)",
             "url": "https://api.slack.com/methods/team.info"
           }
         ],
@@ -192,6 +201,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:linear-icon.svg",
         "requires_secrets": [
@@ -247,6 +259,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:notion-icon.svg",
         "requires_secrets": [
           {
@@ -300,6 +315,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:figma.svg",
         "requires_secrets": [
@@ -356,6 +374,9 @@
           "productivity",
           "infrastructure"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/ic:round-folder-special.svg",
         "requires_secrets": [],
         "declares": {
@@ -404,6 +425,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/mdi:database.svg",
         "requires_secrets": [],
         "declares": {
@@ -439,7 +463,7 @@
         "name": "aws",
         "display_name": "AWS",
         "version": "0.1.0",
-        "description": "Inspect AWS resources \u2014 EC2, S3, Lambda, IAM \u2014 with read-only credentials.",
+        "description": "Inspect AWS resources — EC2, S3, Lambda, IAM — with read-only credentials.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -451,6 +475,9 @@
         ],
         "tags": [
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:aws.svg",
         "requires_secrets": [
@@ -500,7 +527,7 @@
         "name": "cloudflare",
         "display_name": "Cloudflare",
         "version": "0.1.0",
-        "description": "Manage Workers, KV, R2, DNS records \u2014 Cloudflare's official MCP.",
+        "description": "Manage Workers, KV, R2, DNS records — Cloudflare's official MCP.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -512,6 +539,9 @@
         ],
         "tags": [
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:cloudflare.svg",
         "requires_secrets": [
@@ -566,6 +596,9 @@
         ],
         "tags": [
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:vercel-icon.svg",
         "requires_secrets": [
@@ -622,6 +655,9 @@
           "infrastructure",
           "data"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:supabase-icon.svg",
         "requires_secrets": [
           {
@@ -667,7 +703,7 @@
         "name": "docker",
         "display_name": "Docker",
         "version": "0.1.0",
-        "description": "List containers, inspect images, tail logs \u2014 local Docker daemon over the socket.",
+        "description": "List containers, inspect images, tail logs — local Docker daemon over the socket.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -679,6 +715,9 @@
         ],
         "tags": [
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:docker-icon.svg",
         "requires_secrets": [],
@@ -727,6 +766,9 @@
         ],
         "tags": [
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:kubernetes.svg",
         "requires_secrets": [],
@@ -777,6 +819,9 @@
           "data",
           "infrastructure"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:datadog.svg",
         "requires_secrets": [
           {
@@ -789,7 +834,7 @@
           },
           {
             "key": "DD_SITE",
-            "label": "Datadog site (datadoghq.com / datadoghq.eu / \u2026)"
+            "label": "Datadog site (datadoghq.com / datadoghq.eu / …)"
           }
         ],
         "declares": {
@@ -837,6 +882,9 @@
         ],
         "tags": [
           "data"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:sentry-icon.svg",
         "requires_secrets": [
@@ -892,6 +940,9 @@
         "tags": [
           "data"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:mongodb-icon.svg",
         "requires_secrets": [
           {
@@ -945,11 +996,14 @@
         "tags": [
           "data"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:redis.svg",
         "requires_secrets": [
           {
             "key": "REDIS_URL",
-            "label": "Redis URL (redis://\u2026)"
+            "label": "Redis URL (redis://…)"
           }
         ],
         "declares": {
@@ -997,6 +1051,9 @@
         ],
         "tags": [
           "data"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:snowflake.svg",
         "requires_secrets": [
@@ -1046,7 +1103,7 @@
         "name": "git",
         "display_name": "Git",
         "version": "0.1.0",
-        "description": "Local git operations \u2014 diff, log, blame, branch \u2014 without leaving chat.",
+        "description": "Local git operations — diff, log, blame, branch — without leaving chat.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -1058,6 +1115,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:git-icon.svg",
         "requires_secrets": [],
@@ -1106,6 +1166,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:gitlab.svg",
         "requires_secrets": [
@@ -1164,11 +1227,14 @@
         "tags": [
           "infrastructure"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:stripe.svg",
         "requires_secrets": [
           {
             "key": "STRIPE_SECRET_KEY",
-            "label": "Stripe secret key (sk_\u2026)",
+            "label": "Stripe secret key (sk_…)",
             "url": "https://dashboard.stripe.com/apikeys"
           }
         ],
@@ -1218,6 +1284,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:puppeteer.svg",
         "requires_secrets": [],
         "declares": {
@@ -1266,6 +1335,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:playwright.svg",
         "requires_secrets": [],
         "declares": {
@@ -1313,6 +1385,9 @@
         ],
         "tags": [
           "data"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:sqlite.svg",
         "requires_secrets": [
@@ -1366,6 +1441,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:brave.svg",
         "requires_secrets": [
@@ -1421,6 +1499,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/mdi:web.svg",
         "requires_secrets": [
           {
@@ -1475,6 +1556,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/mdi:web.svg",
         "requires_secrets": [],
         "declares": {
@@ -1510,7 +1594,7 @@
         "name": "perplexity",
         "display_name": "Perplexity",
         "version": "0.1.0",
-        "description": "Perplexity Sonar API \u2014 multi-step web answers with inline citations.",
+        "description": "Perplexity Sonar API — multi-step web answers with inline citations.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -1522,6 +1606,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:brain.svg",
         "requires_secrets": [
@@ -1577,6 +1664,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:google-drive.svg",
         "requires_secrets": [],
         "declares": {
@@ -1624,6 +1714,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:google-calendar.svg",
         "requires_secrets": [],
@@ -1673,6 +1766,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:google-gmail.svg",
         "requires_secrets": [],
         "declares": {
@@ -1720,6 +1816,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:google-maps.svg",
         "requires_secrets": [
@@ -1775,6 +1874,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:discord-icon.svg",
         "requires_secrets": [
           {
@@ -1828,6 +1930,9 @@
         ],
         "tags": [
           "infrastructure"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:twilio-icon.svg",
         "requires_secrets": [
@@ -1886,6 +1991,9 @@
         "tags": [
           "infrastructure"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:sendgrid-icon.svg",
         "requires_secrets": [
           {
@@ -1939,6 +2047,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:jira.svg",
         "requires_secrets": [
@@ -2002,6 +2113,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/logos:asana-icon.svg",
         "requires_secrets": [
           {
@@ -2043,7 +2157,7 @@
         "name": "pinecone",
         "display_name": "Pinecone",
         "version": "0.1.0",
-        "description": "Pinecone vector DB \u2014 query, upsert, manage indexes.",
+        "description": "Pinecone vector DB — query, upsert, manage indexes.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -2055,6 +2169,9 @@
         ],
         "tags": [
           "data"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:pinecone.svg",
         "requires_secrets": [
@@ -2101,7 +2218,7 @@
         "name": "weaviate",
         "display_name": "Weaviate",
         "version": "0.1.0",
-        "description": "Weaviate vector DB \u2014 hybrid search, generative modules, semantic queries.",
+        "description": "Weaviate vector DB — hybrid search, generative modules, semantic queries.",
         "author": {
           "name": "Fleetify",
           "url": "https://github.com/fleetifydev"
@@ -2113,6 +2230,9 @@
         ],
         "tags": [
           "data"
+        ],
+        "provides": [
+          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:graph-outline.svg",
         "requires_secrets": [
@@ -2171,6 +2291,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "mcp"
+        ],
         "icon": "https://api.iconify.design/mdi:format-list-numbered.svg",
         "requires_secrets": [],
         "declares": {
@@ -2218,6 +2341,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "subagents"
         ],
         "icon": "https://api.iconify.design/mdi:source-pull.svg",
         "requires_secrets": [],
@@ -2267,6 +2393,9 @@
         "tags": [
           "productivity"
         ],
+        "provides": [
+          "skills"
+        ],
         "icon": "https://api.iconify.design/mdi:test-tube.svg",
         "requires_secrets": [],
         "declares": {
@@ -2314,6 +2443,9 @@
         ],
         "tags": [
           "productivity"
+        ],
+        "provides": [
+          "skills"
         ],
         "icon": "https://api.iconify.design/logos:git-icon.svg",
         "requires_secrets": [],

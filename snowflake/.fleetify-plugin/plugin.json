@@ -15,6 +15,9 @@
   "tags": [
     "data"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/mdi:snowflake.svg",
   "requires_secrets": [
     {

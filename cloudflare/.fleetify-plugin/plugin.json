@@ -2,7 +2,7 @@
   "name": "cloudflare",
   "display_name": "Cloudflare",
   "version": "0.1.0",
-  "description": "Manage Workers, KV, R2, DNS records \u2014 Cloudflare's official MCP.",
+  "description": "Manage Workers, KV, R2, DNS records — Cloudflare's official MCP.",
   "author": {
     "name": "Fleetify",
     "url": "https://github.com/fleetifydev"
@@ -14,6 +14,9 @@
   ],
   "tags": [
     "infrastructure"
+  ],
+  "provides": [
+    "mcp"
   ],
   "icon": "https://api.iconify.design/logos:cloudflare.svg",
   "requires_secrets": [

@@ -15,11 +15,14 @@
   "tags": [
     "data"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:redis.svg",
   "requires_secrets": [
     {
       "key": "REDIS_URL",
-      "label": "Redis URL (redis://\u2026)"
+      "label": "Redis URL (redis://…)"
     }
   ],
   "declares": {

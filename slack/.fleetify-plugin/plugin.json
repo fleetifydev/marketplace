@@ -15,16 +15,19 @@
   "tags": [
     "productivity"
   ],
+  "provides": [
+    "mcp"
+  ],
   "icon": "https://api.iconify.design/logos:slack-icon.svg",
   "requires_secrets": [
     {
       "key": "SLACK_BOT_TOKEN",
-      "label": "Slack Bot Token (xoxb-\u2026)",
+      "label": "Slack Bot Token (xoxb-…)",
       "url": "https://api.slack.com/apps"
     },
     {
       "key": "SLACK_TEAM_ID",
-      "label": "Slack Team ID (T\u2026)",
+      "label": "Slack Team ID (T…)",
       "url": "https://api.slack.com/methods/team.info"
     }
   ],
