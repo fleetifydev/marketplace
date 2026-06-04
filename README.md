@@ -7,7 +7,7 @@ file (anonymously from GitHub raw) and renders each card in **Browse**.
 
 ## What's inside
 
-- **44 plugins** spanning Infrastructure, Productivity, Data,
+- **45 plugins** spanning Infrastructure, Productivity, Data,
   Communication, Search, and Development.
 - One folder per plugin (`<slug>/`), each with its own
   `.fleetify-plugin/plugin.json` manifest.

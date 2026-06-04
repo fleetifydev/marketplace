@@ -553,6 +553,46 @@
       }
     },
     {
+      "path": "neon",
+      "featured": false,
+      "manifest": {
+        "name": "neon",
+        "display_name": "Neon",
+        "version": "0.1.0",
+        "description": "Manage Neon serverless Postgres — projects, branches, and SQL over Neon's hosted remote MCP.",
+        "author": {
+          "name": "Fleetify",
+          "url": "https://github.com/fleetifydev"
+        },
+        "providers": [
+          "claude",
+          "codex",
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
+        ],
+        "tags": [
+          "data",
+          "infrastructure"
+        ],
+        "icon": "https://api.iconify.design/logos:neon-icon.svg",
+        "requires_secrets": [],
+        "declares": {
+          "mcp_servers": 1,
+          "templates": 0,
+          "workflows": 0,
+          "prompts": 0,
+          "providers": {}
+        },
+        "homepage": "https://github.com/fleetifydev/marketplace/tree/main/neon",
+        "license": "MIT"
+      }
+    },
+    {
       "path": "docker",
       "featured": false,
       "manifest": {
