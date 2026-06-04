@@ -10,13 +10,16 @@
   "providers": [
     "claude",
     "codex",
-    "gemini"
+    "gemini",
+    "kimi",
+    "opencode",
+    "github-copilot",
+    "cursor",
+    "hermes",
+    "agy"
   ],
   "tags": [
     "productivity"
-  ],
-  "provides": [
-    "skills"
   ],
   "icon": "https://api.iconify.design/logos:git-icon.svg",
   "requires_secrets": [],
@@ -33,9 +36,40 @@
       },
       "codex": {
         "skills": 1,
+        "commands": 0,
         "hooks": 0
       },
       "gemini": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "kimi": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "opencode": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "github-copilot": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "cursor": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "hermes": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "agy": {
         "skills": 1,
         "commands": 0,
         "hooks": 0

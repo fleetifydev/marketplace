@@ -19,14 +19,17 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity",
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:github-icon.svg",
         "requires_secrets": [
@@ -41,22 +44,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/github",
         "license": "MIT"
@@ -77,14 +65,17 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data",
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:postgresql.svg",
         "requires_secrets": [
@@ -99,22 +90,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/postgres",
         "license": "MIT"
@@ -135,13 +111,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:slack-icon.svg",
         "requires_secrets": [
@@ -161,22 +140,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/slack",
         "license": "MIT"
@@ -197,13 +161,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:linear-icon.svg",
         "requires_secrets": [
@@ -218,22 +185,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/linear",
         "license": "MIT"
@@ -254,13 +206,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:notion-icon.svg",
         "requires_secrets": [
@@ -275,22 +230,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/notion",
         "license": "MIT"
@@ -311,13 +251,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:figma.svg",
         "requires_secrets": [
@@ -332,22 +275,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/figma",
         "license": "MIT"
@@ -368,14 +296,17 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity",
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/ic:round-folder-special.svg",
         "requires_secrets": [],
@@ -384,22 +315,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/filesystem",
         "license": "MIT"
@@ -420,13 +336,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:database.svg",
         "requires_secrets": [],
@@ -435,22 +354,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/memory",
         "license": "MIT"
@@ -471,13 +375,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:aws.svg",
         "requires_secrets": [
@@ -499,22 +406,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/aws",
         "license": "MIT"
@@ -535,13 +427,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:cloudflare.svg",
         "requires_secrets": [
@@ -556,22 +451,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/cloudflare",
         "license": "MIT"
@@ -592,13 +472,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:vercel-icon.svg",
         "requires_secrets": [
@@ -613,22 +496,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/vercel",
         "license": "MIT"
@@ -649,14 +517,17 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure",
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:supabase-icon.svg",
         "requires_secrets": [
@@ -675,22 +546,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/supabase",
         "license": "MIT"
@@ -711,13 +567,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:docker-icon.svg",
         "requires_secrets": [],
@@ -726,22 +585,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/docker",
         "license": "MIT"
@@ -762,13 +606,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:kubernetes.svg",
         "requires_secrets": [],
@@ -777,22 +624,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/kubernetes",
         "license": "MIT"
@@ -813,14 +645,17 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data",
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:datadog.svg",
         "requires_secrets": [
@@ -842,22 +677,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/datadog",
         "license": "MIT"
@@ -878,13 +698,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:sentry-icon.svg",
         "requires_secrets": [
@@ -899,22 +722,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sentry",
         "license": "MIT"
@@ -935,13 +743,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:mongodb-icon.svg",
         "requires_secrets": [
@@ -955,22 +766,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/mongodb",
         "license": "MIT"
@@ -991,13 +787,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:redis.svg",
         "requires_secrets": [
@@ -1011,22 +810,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/redis",
         "license": "MIT"
@@ -1047,13 +831,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:snowflake.svg",
         "requires_secrets": [
@@ -1075,22 +862,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/snowflake",
         "license": "MIT"
@@ -1111,13 +883,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:git-icon.svg",
         "requires_secrets": [],
@@ -1126,22 +901,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/git",
         "license": "MIT"
@@ -1162,13 +922,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:gitlab.svg",
         "requires_secrets": [
@@ -1186,22 +949,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/gitlab",
         "license": "MIT"
@@ -1222,13 +970,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:stripe.svg",
         "requires_secrets": [
@@ -1243,22 +994,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/stripe",
         "license": "MIT"
@@ -1279,13 +1015,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:puppeteer.svg",
         "requires_secrets": [],
@@ -1294,22 +1033,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/puppeteer",
         "license": "MIT"
@@ -1330,13 +1054,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:playwright.svg",
         "requires_secrets": [],
@@ -1345,22 +1072,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/playwright",
         "license": "MIT"
@@ -1381,13 +1093,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:sqlite.svg",
         "requires_secrets": [
@@ -1401,22 +1116,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sqlite",
         "license": "MIT"
@@ -1437,13 +1137,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:brave.svg",
         "requires_secrets": [
@@ -1458,22 +1161,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/brave-search",
         "license": "MIT"
@@ -1494,13 +1182,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:web.svg",
         "requires_secrets": [
@@ -1515,22 +1206,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/tavily",
         "license": "MIT"
@@ -1551,13 +1227,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:web.svg",
         "requires_secrets": [],
@@ -1566,22 +1245,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/fetch",
         "license": "MIT"
@@ -1602,13 +1266,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:brain.svg",
         "requires_secrets": [
@@ -1623,22 +1290,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/perplexity",
         "license": "MIT"
@@ -1659,13 +1311,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:google-drive.svg",
         "requires_secrets": [],
@@ -1674,22 +1329,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-drive",
         "license": "MIT"
@@ -1710,13 +1350,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:google-calendar.svg",
         "requires_secrets": [],
@@ -1725,22 +1368,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-calendar",
         "license": "MIT"
@@ -1761,13 +1389,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:google-gmail.svg",
         "requires_secrets": [],
@@ -1776,22 +1407,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/gmail",
         "license": "MIT"
@@ -1812,13 +1428,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:google-maps.svg",
         "requires_secrets": [
@@ -1833,22 +1452,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-maps",
         "license": "MIT"
@@ -1869,13 +1473,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:discord-icon.svg",
         "requires_secrets": [
@@ -1890,22 +1497,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/discord",
         "license": "MIT"
@@ -1926,13 +1518,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:twilio-icon.svg",
         "requires_secrets": [
@@ -1950,22 +1545,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/twilio",
         "license": "MIT"
@@ -1986,13 +1566,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "infrastructure"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:sendgrid-icon.svg",
         "requires_secrets": [
@@ -2007,22 +1590,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sendgrid",
         "license": "MIT"
@@ -2043,13 +1611,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:jira.svg",
         "requires_secrets": [
@@ -2072,22 +1643,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/jira",
         "license": "MIT"
@@ -2108,13 +1664,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:asana-icon.svg",
         "requires_secrets": [
@@ -2129,22 +1688,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/asana",
         "license": "MIT"
@@ -2165,13 +1709,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/logos:pinecone.svg",
         "requires_secrets": [
@@ -2190,22 +1737,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/pinecone",
         "license": "MIT"
@@ -2226,13 +1758,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "data"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:graph-outline.svg",
         "requires_secrets": [
@@ -2250,22 +1785,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/weaviate",
         "license": "MIT"
@@ -2286,13 +1806,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "opencode",
+          "cursor",
+          "hermes",
+          "github-copilot",
+          "agy",
+          "antigravity-sdk"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "mcp"
         ],
         "icon": "https://api.iconify.design/mdi:format-list-numbered.svg",
         "requires_secrets": [],
@@ -2301,22 +1824,7 @@
           "templates": 0,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/sequential-thinking",
         "license": "MIT"
@@ -2337,13 +1845,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "kimi",
+          "opencode",
+          "github-copilot",
+          "cursor",
+          "hermes",
+          "agy"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "subagents"
         ],
         "icon": "https://api.iconify.design/mdi:source-pull.svg",
         "requires_secrets": [],
@@ -2352,22 +1863,7 @@
           "templates": 1,
           "workflows": 0,
           "prompts": 0,
-          "providers": {
-            "claude": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            },
-            "codex": {
-              "skills": 0,
-              "hooks": 0
-            },
-            "gemini": {
-              "skills": 0,
-              "commands": 0,
-              "hooks": 0
-            }
-          }
+          "providers": {}
         },
         "homepage": "https://github.com/fleetifydev/marketplace/tree/main/code-reviewer",
         "license": "MIT"
@@ -2388,13 +1884,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "kimi",
+          "opencode",
+          "github-copilot",
+          "cursor",
+          "hermes",
+          "agy"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "skills"
         ],
         "icon": "https://api.iconify.design/mdi:test-tube.svg",
         "requires_secrets": [],
@@ -2411,9 +1910,40 @@
             },
             "codex": {
               "skills": 1,
+              "commands": 0,
               "hooks": 0
             },
             "gemini": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "kimi": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "opencode": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "github-copilot": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "cursor": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "hermes": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "agy": {
               "skills": 1,
               "commands": 0,
               "hooks": 0
@@ -2439,13 +1969,16 @@
         "providers": [
           "claude",
           "codex",
-          "gemini"
+          "gemini",
+          "kimi",
+          "opencode",
+          "github-copilot",
+          "cursor",
+          "hermes",
+          "agy"
         ],
         "tags": [
           "productivity"
-        ],
-        "provides": [
-          "skills"
         ],
         "icon": "https://api.iconify.design/logos:git-icon.svg",
         "requires_secrets": [],
@@ -2462,9 +1995,40 @@
             },
             "codex": {
               "skills": 1,
+              "commands": 0,
               "hooks": 0
             },
             "gemini": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "kimi": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "opencode": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "github-copilot": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "cursor": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "hermes": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
+            },
+            "agy": {
               "skills": 1,
               "commands": 0,
               "hooks": 0

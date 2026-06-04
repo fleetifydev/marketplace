@@ -10,13 +10,16 @@
   "providers": [
     "claude",
     "codex",
-    "gemini"
+    "gemini",
+    "kimi",
+    "opencode",
+    "github-copilot",
+    "cursor",
+    "hermes",
+    "agy"
   ],
   "tags": [
     "productivity"
-  ],
-  "provides": [
-    "subagents"
   ],
   "icon": "https://api.iconify.design/mdi:source-pull.svg",
   "requires_secrets": [],
@@ -25,22 +28,7 @@
     "templates": 1,
     "workflows": 0,
     "prompts": 0,
-    "providers": {
-      "claude": {
-        "skills": 0,
-        "commands": 0,
-        "hooks": 0
-      },
-      "codex": {
-        "skills": 0,
-        "hooks": 0
-      },
-      "gemini": {
-        "skills": 0,
-        "commands": 0,
-        "hooks": 0
-      }
-    }
+    "providers": {}
   },
   "homepage": "https://github.com/fleetifydev/marketplace/tree/main/code-reviewer",
   "license": "MIT"
