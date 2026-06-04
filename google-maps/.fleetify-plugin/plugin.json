@@ -10,13 +10,16 @@
   "providers": [
     "claude",
     "codex",
-    "gemini"
+    "gemini",
+    "opencode",
+    "cursor",
+    "hermes",
+    "github-copilot",
+    "agy",
+    "antigravity-sdk"
   ],
   "tags": [
     "productivity"
-  ],
-  "provides": [
-    "mcp"
   ],
   "icon": "https://api.iconify.design/logos:google-maps.svg",
   "requires_secrets": [
@@ -31,22 +34,7 @@
     "templates": 0,
     "workflows": 0,
     "prompts": 0,
-    "providers": {
-      "claude": {
-        "skills": 0,
-        "commands": 0,
-        "hooks": 0
-      },
-      "codex": {
-        "skills": 0,
-        "hooks": 0
-      },
-      "gemini": {
-        "skills": 0,
-        "commands": 0,
-        "hooks": 0
-      }
-    }
+    "providers": {}
   },
   "homepage": "https://github.com/fleetifydev/marketplace/tree/main/google-maps",
   "license": "MIT"
