@@ -8,14 +8,14 @@
     "url": "https://github.com/fleetifydev"
   },
   "providers": [
-    "claude",
-    "codex",
-    "gemini",
+    "claude-code",
+    "codex-cli",
+    "gemini-cli",
     "opencode",
-    "cursor",
-    "hermes",
+    "cursor-cli",
+    "hermes-agent",
     "github-copilot",
-    "agy",
+    "antigravity-cli",
     "antigravity-sdk"
   ],
   "tags": [

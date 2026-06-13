@@ -8,15 +8,15 @@
     "url": "https://github.com/fleetifydev"
   },
   "providers": [
-    "claude",
-    "codex",
-    "gemini",
-    "kimi",
+    "claude-code",
+    "codex-cli",
+    "gemini-cli",
+    "kimi-code",
     "opencode",
     "github-copilot",
-    "cursor",
-    "hermes",
-    "agy"
+    "cursor-cli",
+    "hermes-agent",
+    "antigravity-cli"
   ],
   "tags": [
     "productivity"
@@ -29,22 +29,22 @@
     "workflows": 0,
     "prompts": 0,
     "providers": {
-      "claude": {
+      "claude-code": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
       },
-      "codex": {
+      "codex-cli": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
       },
-      "gemini": {
+      "gemini-cli": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
       },
-      "kimi": {
+      "kimi-code": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
@@ -59,17 +59,17 @@
         "commands": 0,
         "hooks": 0
       },
-      "cursor": {
+      "cursor-cli": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
       },
-      "hermes": {
+      "hermes-agent": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
       },
-      "agy": {
+      "antigravity-cli": {
         "skills": 1,
         "commands": 0,
         "hooks": 0
