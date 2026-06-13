@@ -8,15 +8,15 @@
     "url": "https://github.com/fleetifydev"
   },
   "providers": [
-    "claude",
-    "codex",
-    "gemini",
-    "kimi",
+    "claude-code",
+    "codex-cli",
+    "gemini-cli",
+    "kimi-code",
     "opencode",
     "github-copilot",
-    "cursor",
-    "hermes",
-    "agy"
+    "cursor-cli",
+    "hermes-agent",
+    "antigravity-cli"
   ],
   "tags": [
     "productivity"
