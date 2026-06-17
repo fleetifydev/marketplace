@@ -1,0 +1,7 @@
+{
+  "name": "Fleetify Official",
+  "description": "Curated plugins by the Fleetify team. Browse, install, and configure standard integrations for every Fleet session.",
+  "homepage": "https://github.com/fleetifydev/marketplace",
+  "icon": "icon.png",
+  "featured": ["github", "postgres", "slack", "linear", "notion", "figma", "filesystem", "memory"]
+}
