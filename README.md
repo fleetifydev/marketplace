@@ -11,11 +11,14 @@ file (anonymously from GitHub raw) and renders each card in **Browse**.
   Communication, Search, and Development.
 - One folder per plugin (`<slug>/`), each with its own
   `.fleetify-plugin/plugin.json` manifest.
-- `marketplace.json` with **inline manifests** so the desktop app can
-  list every card in a single HTTP request — no per-plugin fetch loop,
-  no GitHub anonymous rate-limit pain.
-- Featured rotation driven by `marketplace.json` `featured: true`
-  flags; the rest grouped by `tags` into Browse rows.
+- `marketplace.json` — a **generated** index with **inline manifests**
+  so the desktop app can list every card in a single HTTP request — no
+  per-plugin fetch loop, no GitHub anonymous rate-limit pain. Build it
+  with `node scripts/build-marketplace.mjs`; never hand-edit it.
+- Featured rotation driven by the `featured` list in
+  `scripts/marketplace.meta.json` (surfaced as `featured: true` per
+  entry in `marketplace.json`); the rest grouped by `tags` into Browse
+  rows.
 
 ### At a glance
 
@@ -126,11 +129,11 @@ The Fleet installer cross-checks declared counts against the on-disk
 files at install time. Mismatches reject the install with a 422 so
 broken manifests never enter the registry.
 
-## `marketplace.json`
+## `marketplace.json` is generated — do not hand-edit
 
-The catalog index at the repo root. Each entry points at a plugin
-folder and may **inline its manifest** so Browse renders without
-fetching every plugin file individually:
+The catalog index at the repo root is a **build artifact**. Each
+entry points at a plugin folder and **inlines that plugin's manifest**
+so Browse renders without fetching every plugin file individually:
 
 ```json
 {
@@ -149,10 +152,70 @@ fetching every plugin file individually:
 ```
 
 `featured: true` lifts a plugin into the Browse "Featured" hero row.
-The inline `manifest` block is optional but **strongly recommended**
-for repos with more than a handful of plugins — it keeps Browse to a
-single HTTP call per source and stays well under GitHub's anonymous
-60-req/h limit.
+Inlining the manifest keeps Browse to a single HTTP call per source and
+stays well under GitHub's anonymous 60-req/h limit.
+
+**Single source of truth:** edit `<plugin>/.fleetify-plugin/plugin.json`
+only. **Never hand-edit `marketplace.json`** — regenerate it with:
+
+```bash
+node scripts/build-marketplace.mjs        # rewrite marketplace.json
+node scripts/build-marketplace.mjs --check # verify it's in sync (CI runs this)
+```
+
+The editorial header (`name` / `description` / `homepage` / `icon`)
+and the curated `featured` list live in
+`scripts/marketplace.meta.json`; everything else in `marketplace.json`
+is derived from the plugin manifests. CI fails any PR whose
+`marketplace.json` doesn't match a fresh regenerate.
+
+## Versioning (SemVer)
+
+Every plugin carries a `version` in its `plugin.json`, and **every
+change must bump it** following [SemVer](https://semver.org/):
+
+- **patch** (`0.1.0` → `0.1.1`) — a fix or docs/metadata tweak with no
+  behaviour change.
+- **minor** (`0.1.1` → `0.2.0`) — a new capability, a new *optional*
+  secret, or additive `declares` (more skills/commands/MCP servers).
+- **major** (`0.2.0` → `1.0.0`) — a breaking change: a removed or
+  renamed *required* secret, a changed MCP server name or contract, a
+  removed component, or a compatibility-breaking bump to
+  `min_fleetify_version`.
+
+The Fleet app shows an update whenever the catalog version is greater
+than the installed version; **major** updates prompt the user before
+applying.
+
+## CHANGELOG
+
+Every plugin has a `<plugin>/CHANGELOG.md` in
+[Keep a Changelog](https://keepachangelog.com/) format — newest entry
+on top, exactly one `## [X.Y.Z] - YYYY-MM-DD` section per released
+version. The Fleet app renders this file in the plugin's **Changelog**
+tab, so keep it human-readable.
+
+When you bump a plugin's `version`, add a matching
+`## [<new-version>] - <date>` section describing what changed. To
+scaffold a baseline `CHANGELOG.md` for newly added plugins (idempotent
+— it skips any plugin that already has one):
+
+```bash
+node scripts/seed-changelogs.mjs
+```
+
+## CI
+
+Every PR runs `.github/workflows/validate.yml`, which:
+
+1. Validates every manifest and checks `marketplace.json` is in sync
+   (`build-marketplace.mjs --check`).
+2. On pull requests, runs `check-bump.mjs` against the PR base: any
+   plugin whose content changed must have **bumped its version** and
+   added a **matching `## [X.Y.Z]` CHANGELOG section**. (A
+   CHANGELOG-only edit needs no version bump.)
+
+A green check means the PR will install cleanly for end users.
 
 ## Add your own
 
@@ -161,10 +224,23 @@ single HTTP call per source and stays well under GitHub's anonymous
 3. Drop in `.fleetify-plugin/plugin.json` (copy from any neighbour for
    the schema) plus the component files
    (`mcp.json`, `templates/`, `.claude/skills/`, `.gemini/commands/`, …).
-4. Add a matching entry to `marketplace.json` under `plugins[]`. Inline
-   the manifest if you want Browse to render your card without an
-   extra fetch.
-5. Open a pull request.
+4. Run `node scripts/seed-changelogs.mjs` to scaffold
+   `<your-plugin>/CHANGELOG.md`.
+5. Run `node scripts/build-marketplace.mjs` to regenerate
+   `marketplace.json`.
+6. Commit the plugin files, the CHANGELOG, and the regenerated
+   `marketplace.json`, then open a pull request.
+
+**Editing an existing plugin?** The author workflow is:
+
+1. Edit the plugin's files.
+2. Bump `version` in `<plugin>/.fleetify-plugin/plugin.json` (see
+   *Versioning* above).
+3. Add a `## [X.Y.Z] - YYYY-MM-DD` section to `<plugin>/CHANGELOG.md`.
+4. Run `node scripts/build-marketplace.mjs` to regenerate
+   `marketplace.json`.
+5. Commit the plugin files **+ CHANGELOG + `marketplace.json`** together
+   and open a PR.
 
 Fleet's review process is the same as Cursor's: open-source-only, no
 binary blobs, no obfuscated install scripts. Reviewers verify that

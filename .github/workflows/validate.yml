@@ -1,0 +1,20 @@
+name: validate
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate manifests + marketplace.json in sync
+        run: node scripts/build-marketplace.mjs --check
+      - name: Changed plugins bumped version + updated CHANGELOG
+        if: github.event_name == 'pull_request'
+        run: node scripts/check-bump.mjs "${{ github.event.pull_request.base.sha }}"
