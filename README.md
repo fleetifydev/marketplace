@@ -192,8 +192,14 @@ applying.
 Every plugin has a `<plugin>/CHANGELOG.md` in
 [Keep a Changelog](https://keepachangelog.com/) format — newest entry
 on top, exactly one `## [X.Y.Z] - YYYY-MM-DD` section per released
-version. The Fleet app renders this file in the plugin's **Changelog**
-tab, so keep it human-readable.
+version. The Fleet app **parses** this file and renders each release on
+the plugin's **Changelog** tab as a structured view: a version header,
+the date, and your changes grouped under the standard categories —
+`### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`,
+`### Security`.
+
+See **[`CHANGELOG_TEMPLATE.md`](CHANGELOG_TEMPLATE.md)** for the full
+format reference and a copy-paste starter.
 
 When you bump a plugin's `version`, add a matching
 `## [<new-version>] - <date>` section describing what changed. To
