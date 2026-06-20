@@ -10,7 +10,7 @@
       "manifest": {
         "name": "asana",
         "display_name": "Asana",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Browse projects, tasks, and teams. Update task status from chat.",
         "author": {
           "name": "Fleetify",
@@ -25,7 +25,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -55,7 +56,7 @@
       "manifest": {
         "name": "aws",
         "display_name": "AWS",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Inspect AWS resources — EC2, S3, Lambda, IAM — with read-only credentials.",
         "author": {
           "name": "Fleetify",
@@ -70,7 +71,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -107,7 +109,7 @@
       "manifest": {
         "name": "brave-search",
         "display_name": "Brave Search",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Anonymous web + local search via Brave's API. Default goto for grounded research.",
         "author": {
           "name": "Fleetify",
@@ -122,7 +124,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -152,7 +155,7 @@
       "manifest": {
         "name": "cloudflare",
         "display_name": "Cloudflare",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Manage Workers, KV, R2, DNS records — Cloudflare's official MCP.",
         "author": {
           "name": "Fleetify",
@@ -167,7 +170,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -197,7 +201,7 @@
       "manifest": {
         "name": "code-reviewer",
         "display_name": "Code Reviewer",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Subagent template that audits diffs for safety, style, and missing tests.",
         "author": {
           "name": "Fleetify",
@@ -212,7 +216,8 @@
           "github-copilot",
           "cursor-cli",
           "hermes-agent",
-          "antigravity-cli"
+          "antigravity-cli",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -236,7 +241,7 @@
       "manifest": {
         "name": "datadog",
         "display_name": "Datadog",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Query metrics, search logs, browse dashboards from Datadog.",
         "author": {
           "name": "Fleetify",
@@ -251,7 +256,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data",
@@ -289,7 +295,7 @@
       "manifest": {
         "name": "diff-summarizer",
         "display_name": "Diff Summarizer",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Skill that turns `git diff` output into a tight PR-ready summary.",
         "author": {
           "name": "Fleetify",
@@ -304,7 +310,8 @@
           "github-copilot",
           "cursor-cli",
           "hermes-agent",
-          "antigravity-cli"
+          "antigravity-cli",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -361,6 +368,11 @@
               "skills": 1,
               "commands": 0,
               "hooks": 0
+            },
+            "grok-build": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
             }
           }
         },
@@ -374,7 +386,7 @@
       "manifest": {
         "name": "discord",
         "display_name": "Discord",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Bot-level Discord operations: read channels, post messages, manage roles.",
         "author": {
           "name": "Fleetify",
@@ -389,7 +401,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -419,7 +432,7 @@
       "manifest": {
         "name": "docker",
         "display_name": "Docker",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "List containers, inspect images, tail logs — local Docker daemon over the socket.",
         "author": {
           "name": "Fleetify",
@@ -434,7 +447,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -458,7 +472,7 @@
       "manifest": {
         "name": "fetch",
         "display_name": "Fetch",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Plain HTTP fetcher: get any URL and return cleaned text, no auth required.",
         "author": {
           "name": "Fleetify",
@@ -473,7 +487,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -497,7 +512,7 @@
       "manifest": {
         "name": "figma",
         "display_name": "Figma",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read frames, components, and design tokens from any Figma file.",
         "author": {
           "name": "Fleetify",
@@ -512,7 +527,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -542,7 +558,7 @@
       "manifest": {
         "name": "filesystem",
         "display_name": "Filesystem",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
         "author": {
           "name": "Fleetify",
@@ -557,7 +573,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity",
@@ -582,7 +599,7 @@
       "manifest": {
         "name": "git",
         "display_name": "Git",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Local git operations — diff, log, blame, branch — without leaving chat.",
         "author": {
           "name": "Fleetify",
@@ -597,7 +614,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -621,7 +639,7 @@
       "manifest": {
         "name": "github",
         "display_name": "GitHub",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read issues, PRs, file contents, and search across any GitHub repo the agent has access to.",
         "author": {
           "name": "Fleetify",
@@ -636,7 +654,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity",
@@ -667,7 +686,7 @@
       "manifest": {
         "name": "gitlab",
         "display_name": "GitLab",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
         "author": {
           "name": "Fleetify",
@@ -682,7 +701,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -715,7 +735,7 @@
       "manifest": {
         "name": "gmail",
         "display_name": "Gmail",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read inbox, draft + send messages, manage labels via Gmail's API.",
         "author": {
           "name": "Fleetify",
@@ -730,7 +750,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -754,7 +775,7 @@
       "manifest": {
         "name": "google-calendar",
         "display_name": "Google Calendar",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read events, create + update Calendar entries across your Google calendars.",
         "author": {
           "name": "Fleetify",
@@ -769,7 +790,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -793,7 +815,7 @@
       "manifest": {
         "name": "google-drive",
         "display_name": "Google Drive",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "List, read, and search Google Drive files. OAuth-based, read-only by default.",
         "author": {
           "name": "Fleetify",
@@ -808,7 +830,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -832,7 +855,7 @@
       "manifest": {
         "name": "google-maps",
         "display_name": "Google Maps",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Geocode addresses, get directions, search nearby places.",
         "author": {
           "name": "Fleetify",
@@ -847,7 +870,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -877,7 +901,7 @@
       "manifest": {
         "name": "jira",
         "display_name": "Jira",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read + update Jira tickets, sprints, and projects across Atlassian Cloud.",
         "author": {
           "name": "Fleetify",
@@ -892,7 +916,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -930,7 +955,7 @@
       "manifest": {
         "name": "kubernetes",
         "display_name": "Kubernetes",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Inspect pods, services, deployments via your current kubectl context.",
         "author": {
           "name": "Fleetify",
@@ -945,7 +970,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -969,7 +995,7 @@
       "manifest": {
         "name": "linear",
         "display_name": "Linear",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Browse issues, projects, and cycles. Create + update Linear issues from chat.",
         "author": {
           "name": "Fleetify",
@@ -984,7 +1010,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1014,7 +1041,7 @@
       "manifest": {
         "name": "memory",
         "display_name": "Memory",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Persistent knowledge-graph memory: entities, relations, and observations across sessions.",
         "author": {
           "name": "Fleetify",
@@ -1029,7 +1056,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1053,7 +1081,7 @@
       "manifest": {
         "name": "mongodb",
         "display_name": "MongoDB",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Connect to MongoDB clusters: list collections, run aggregations, inspect indexes.",
         "author": {
           "name": "Fleetify",
@@ -1068,7 +1096,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"
@@ -1097,7 +1126,7 @@
       "manifest": {
         "name": "neon",
         "display_name": "Neon",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Manage Neon serverless Postgres — projects, branches, and SQL over Neon's hosted remote MCP.",
         "author": {
           "name": "Fleetify",
@@ -1112,7 +1141,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data",
@@ -1137,7 +1167,7 @@
       "manifest": {
         "name": "no-mocks-rule",
         "display_name": "No Mocks Rule",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "System-prompt rule forbidding mocks in integration tests; agents must hit a real test DB.",
         "author": {
           "name": "Fleetify",
@@ -1152,7 +1182,8 @@
           "github-copilot",
           "cursor-cli",
           "hermes-agent",
-          "antigravity-cli"
+          "antigravity-cli",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1209,6 +1240,11 @@
               "skills": 1,
               "commands": 0,
               "hooks": 0
+            },
+            "grok-build": {
+              "skills": 1,
+              "commands": 0,
+              "hooks": 0
             }
           }
         },
@@ -1222,7 +1258,7 @@
       "manifest": {
         "name": "notion",
         "display_name": "Notion",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read + write Notion pages, databases, and blocks straight from chat.",
         "author": {
           "name": "Fleetify",
@@ -1237,7 +1273,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1267,7 +1304,7 @@
       "manifest": {
         "name": "perplexity",
         "display_name": "Perplexity",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Perplexity Sonar API — multi-step web answers with inline citations.",
         "author": {
           "name": "Fleetify",
@@ -1282,7 +1319,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1312,7 +1350,7 @@
       "manifest": {
         "name": "pinecone",
         "display_name": "Pinecone",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Pinecone vector DB — query, upsert, manage indexes.",
         "author": {
           "name": "Fleetify",
@@ -1327,7 +1365,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"
@@ -1361,7 +1400,7 @@
       "manifest": {
         "name": "playwright",
         "display_name": "Playwright",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Cross-browser automation (Chromium / Firefox / WebKit) for tests and scraping.",
         "author": {
           "name": "Fleetify",
@@ -1376,7 +1415,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1400,7 +1440,7 @@
       "manifest": {
         "name": "postgres",
         "display_name": "PostgreSQL",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Query, inspect schemas, run EXPLAIN — read-only Postgres MCP.",
         "author": {
           "name": "Fleetify",
@@ -1415,7 +1455,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data",
@@ -1446,7 +1487,7 @@
       "manifest": {
         "name": "puppeteer",
         "display_name": "Puppeteer",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Headless-Chrome browser control: navigate, click, screenshot, extract text.",
         "author": {
           "name": "Fleetify",
@@ -1461,7 +1502,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1485,7 +1527,7 @@
       "manifest": {
         "name": "redis",
         "display_name": "Redis",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read-only Redis client: keys, hashes, lists, sorted-sets inspection.",
         "author": {
           "name": "Fleetify",
@@ -1500,7 +1542,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"
@@ -1529,7 +1572,7 @@
       "manifest": {
         "name": "sendgrid",
         "display_name": "SendGrid",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Send transactional + marketing email via SendGrid.",
         "author": {
           "name": "Fleetify",
@@ -1544,7 +1587,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -1574,7 +1618,7 @@
       "manifest": {
         "name": "sentry",
         "display_name": "Sentry",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Browse error groups, fetch stack traces, triage issues from Sentry.",
         "author": {
           "name": "Fleetify",
@@ -1589,7 +1633,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"
@@ -1619,7 +1664,7 @@
       "manifest": {
         "name": "sequential-thinking",
         "display_name": "Sequential Thinking",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "MCP server that prompts the agent to break a problem into numbered steps and revise mid-flight.",
         "author": {
           "name": "Fleetify",
@@ -1634,7 +1679,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1658,7 +1704,7 @@
       "manifest": {
         "name": "slack",
         "display_name": "Slack",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read channel history, post messages, manage Slack from any agent.",
         "author": {
           "name": "Fleetify",
@@ -1673,7 +1719,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1708,7 +1755,7 @@
       "manifest": {
         "name": "snowflake",
         "display_name": "Snowflake",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Run SQL against Snowflake warehouses, inspect schemas and warehouses.",
         "author": {
           "name": "Fleetify",
@@ -1723,7 +1770,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"
@@ -1760,7 +1808,7 @@
       "manifest": {
         "name": "sqlite",
         "display_name": "SQLite",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Local SQLite client: query schemas, run SELECT, inspect indexes.",
         "author": {
           "name": "Fleetify",
@@ -1775,7 +1823,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"
@@ -1804,7 +1853,7 @@
       "manifest": {
         "name": "stripe",
         "display_name": "Stripe",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
         "author": {
           "name": "Fleetify",
@@ -1819,7 +1868,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -1849,7 +1899,7 @@
       "manifest": {
         "name": "supabase",
         "display_name": "Supabase",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
         "author": {
           "name": "Fleetify",
@@ -1864,7 +1914,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure",
@@ -1899,7 +1950,7 @@
       "manifest": {
         "name": "tavily",
         "display_name": "Tavily",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "LLM-tuned search API: clean snippets, recency-ranked, cite-able.",
         "author": {
           "name": "Fleetify",
@@ -1914,7 +1965,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "productivity"
@@ -1944,7 +1996,7 @@
       "manifest": {
         "name": "twilio",
         "display_name": "Twilio",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Send SMS, place voice calls, manage Twilio phone numbers.",
         "author": {
           "name": "Fleetify",
@@ -1959,7 +2011,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -1992,7 +2045,7 @@
       "manifest": {
         "name": "vercel",
         "display_name": "Vercel",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "List deployments, inspect builds, fetch logs from your Vercel projects.",
         "author": {
           "name": "Fleetify",
@@ -2007,7 +2060,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "infrastructure"
@@ -2037,7 +2091,7 @@
       "manifest": {
         "name": "weaviate",
         "display_name": "Weaviate",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "description": "Weaviate vector DB — hybrid search, generative modules, semantic queries.",
         "author": {
           "name": "Fleetify",
@@ -2052,7 +2106,8 @@
           "hermes-agent",
           "github-copilot",
           "antigravity-cli",
-          "antigravity-sdk"
+          "antigravity-sdk",
+          "grok-build"
         ],
         "tags": [
           "data"

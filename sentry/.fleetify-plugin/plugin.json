@@ -1,7 +1,7 @@
 {
   "name": "sentry",
   "display_name": "Sentry",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Browse error groups, fetch stack traces, triage issues from Sentry.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "data"

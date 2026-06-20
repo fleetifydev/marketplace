@@ -1,7 +1,7 @@
 {
   "name": "supabase",
   "display_name": "Supabase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "infrastructure",

@@ -1,7 +1,7 @@
 {
   "name": "kubernetes",
   "display_name": "Kubernetes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Inspect pods, services, deployments via your current kubectl context.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "infrastructure"
