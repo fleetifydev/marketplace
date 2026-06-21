@@ -1,7 +1,7 @@
 {
   "name": "snowflake",
   "display_name": "Snowflake",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run SQL against Snowflake warehouses, inspect schemas and warehouses.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "data"

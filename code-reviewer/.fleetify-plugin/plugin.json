@@ -1,7 +1,7 @@
 {
   "name": "code-reviewer",
   "display_name": "Code Reviewer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Subagent template that audits diffs for safety, style, and missing tests.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "github-copilot",
     "cursor-cli",
     "hermes-agent",
-    "antigravity-cli"
+    "antigravity-cli",
+    "grok-build"
   ],
   "tags": [
     "productivity"

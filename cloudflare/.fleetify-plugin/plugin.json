@@ -1,7 +1,7 @@
 {
   "name": "cloudflare",
   "display_name": "Cloudflare",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Manage Workers, KV, R2, DNS records — Cloudflare's official MCP.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "infrastructure"

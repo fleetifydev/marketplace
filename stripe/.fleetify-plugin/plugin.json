@@ -1,7 +1,7 @@
 {
   "name": "stripe",
   "display_name": "Stripe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "infrastructure"

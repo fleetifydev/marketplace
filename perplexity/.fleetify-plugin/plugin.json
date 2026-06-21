@@ -1,7 +1,7 @@
 {
   "name": "perplexity",
   "display_name": "Perplexity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Perplexity Sonar API — multi-step web answers with inline citations.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "productivity"

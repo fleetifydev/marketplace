@@ -1,7 +1,7 @@
 {
   "name": "diff-summarizer",
   "display_name": "Diff Summarizer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Skill that turns `git diff` output into a tight PR-ready summary.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "github-copilot",
     "cursor-cli",
     "hermes-agent",
-    "antigravity-cli"
+    "antigravity-cli",
+    "grok-build"
   ],
   "tags": [
     "productivity"
@@ -70,6 +71,11 @@
         "hooks": 0
       },
       "antigravity-cli": {
+        "skills": 1,
+        "commands": 0,
+        "hooks": 0
+      },
+      "grok-build": {
         "skills": 1,
         "commands": 0,
         "hooks": 0

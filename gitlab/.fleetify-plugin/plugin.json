@@ -1,7 +1,7 @@
 {
   "name": "gitlab",
   "display_name": "GitLab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
   "author": {
     "name": "Fleetify",
@@ -16,7 +16,8 @@
     "hermes-agent",
     "github-copilot",
     "antigravity-cli",
-    "antigravity-sdk"
+    "antigravity-sdk",
+    "grok-build"
   ],
   "tags": [
     "productivity"
