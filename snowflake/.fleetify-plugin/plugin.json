@@ -1,7 +1,7 @@
 {
   "name": "snowflake",
   "display_name": "Snowflake",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Run SQL against Snowflake warehouses, inspect schemas and warehouses.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "opencode",
     "cursor-cli",
     "hermes-agent",

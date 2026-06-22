@@ -1,7 +1,7 @@
 {
   "name": "perplexity",
   "display_name": "Perplexity",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Perplexity Sonar API — multi-step web answers with inline citations.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "opencode",
     "cursor-cli",
     "hermes-agent",
