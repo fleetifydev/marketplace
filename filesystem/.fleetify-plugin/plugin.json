@@ -1,7 +1,7 @@
 {
   "name": "filesystem",
   "display_name": "Filesystem",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "opencode",
     "cursor-cli",
     "hermes-agent",
