@@ -3,6 +3,11 @@
 All notable changes to this plugin are documented in this file.
 Format: [Keep a Changelog](https://keepachangelog.com/). Versioning: [SemVer](https://semver.org/).
 
+## [0.1.2] - 2026-06-22
+
+### Removed
+- Gemini CLI (`gemini-cli`) provider support.
+
 ## [0.1.1] - 2026-06-20
 
 ### Added

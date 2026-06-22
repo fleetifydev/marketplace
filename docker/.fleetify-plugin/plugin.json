@@ -1,7 +1,7 @@
 {
   "name": "docker",
   "display_name": "Docker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "List containers, inspect images, tail logs — local Docker daemon over the socket.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "opencode",
     "cursor-cli",
     "hermes-agent",

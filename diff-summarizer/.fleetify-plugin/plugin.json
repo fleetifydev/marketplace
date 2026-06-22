@@ -1,7 +1,7 @@
 {
   "name": "diff-summarizer",
   "display_name": "Diff Summarizer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Skill that turns `git diff` output into a tight PR-ready summary.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "kimi-code",
     "opencode",
     "github-copilot",
@@ -36,11 +35,6 @@
         "hooks": 0
       },
       "codex-cli": {
-        "skills": 1,
-        "commands": 0,
-        "hooks": 0
-      },
-      "gemini-cli": {
         "skills": 1,
         "commands": 0,
         "hooks": 0

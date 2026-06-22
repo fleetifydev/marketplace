@@ -1,7 +1,7 @@
 {
   "name": "supabase",
   "display_name": "Supabase",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "opencode",
     "cursor-cli",
     "hermes-agent",

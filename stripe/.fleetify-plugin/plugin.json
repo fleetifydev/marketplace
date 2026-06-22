@@ -1,7 +1,7 @@
 {
   "name": "stripe",
   "display_name": "Stripe",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
   "author": {
     "name": "Fleetify",
@@ -10,7 +10,6 @@
   "providers": [
     "claude-code",
     "codex-cli",
-    "gemini-cli",
     "opencode",
     "cursor-cli",
     "hermes-agent",
