@@ -35,6 +35,17 @@ test("readJson reports an unreadable file with the file path", (t) => {
   assert.throws(() => readJson(path.join(root, "missing.json")), /cannot read .*missing\.json/);
 });
 
+test("every plugin in the real catalog passes with zero errors", async () => {
+  const { validatePlugin } = await import("../lib/validate.mjs");
+  const errors = [];
+  for (const dir of discoverPluginDirs(REPO_ROOT)) {
+    for (const issue of validatePlugin(REPO_ROOT, dir).issues) {
+      if (issue.level === "error") errors.push(`${issue.file}: ${issue.message}`);
+    }
+  }
+  assert.deepEqual(errors, []);
+});
+
 test("build-marketplace --check passes on the real catalog", () => {
   const r = spawnSync(process.execPath, ["scripts/build-marketplace.mjs", "--check"], {
     cwd: REPO_ROOT,
