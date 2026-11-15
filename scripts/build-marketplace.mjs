@@ -23,63 +23,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { MANIFEST_SUBPATH, NAME_RE, SEMVER_RE } from "./lib/constants.mjs";
+import { discoverPluginDirs, readJson } from "./lib/catalog.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
 const META_PATH = path.join(SCRIPT_DIR, "marketplace.meta.json");
 const OUTPUT_PATH = path.join(REPO_ROOT, "marketplace.json");
-const MANIFEST_SUBPATH = path.join(".fleetify-plugin", "plugin.json");
-
-/** Directory names that are never plugins. */
-const IGNORED_DIRS = new Set([".git", "scripts", "node_modules"]);
-
-const NAME_RE = /^[a-z0-9][a-z0-9-]*$/;
-
-// Strict semver: X.Y.Z with optional -prerelease and +build.
-// Numeric identifiers (major/minor/patch and numeric pre-release identifiers)
-// must not contain leading zeros. Mirrors the official semver.org pattern.
-const SEMVER_RE =
-  /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*)(?:\.(?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*))*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$/;
-
-/**
- * Read + JSON.parse a file, throwing a contextualized error on failure.
- * @param {string} filePath
- * @returns {*}
- */
-function readJson(filePath) {
-  let raw;
-  try {
-    raw = fs.readFileSync(filePath, "utf8");
-  } catch (err) {
-    throw new Error(`cannot read ${filePath}: ${err.message}`);
-  }
-  try {
-    return JSON.parse(raw);
-  } catch (err) {
-    throw new Error(`invalid JSON in ${filePath}: ${err.message}`);
-  }
-}
-
-/**
- * Enumerate top-level plugin directory names (those containing a manifest at
- * `<dir>/.fleetify-plugin/plugin.json`). Skips ignored dirs, dotfiles, and
- * non-directories. Returned sorted ascending.
- * @returns {string[]}
- */
-function discoverPluginDirs() {
-  const entries = fs.readdirSync(REPO_ROOT, { withFileTypes: true });
-  const dirs = [];
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-    const name = entry.name;
-    if (name.startsWith(".")) continue;
-    if (IGNORED_DIRS.has(name)) continue;
-    const manifestPath = path.join(REPO_ROOT, name, MANIFEST_SUBPATH);
-    if (fs.existsSync(manifestPath)) dirs.push(name);
-  }
-  dirs.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
-  return dirs;
-}
 
 /**
  * Validate a single parsed manifest against the marketplace contract.
@@ -201,7 +151,7 @@ function main() {
   const meta = loadMeta();
   const featuredSet = new Set(meta.featured);
 
-  const pluginDirs = discoverPluginDirs();
+  const pluginDirs = discoverPluginDirs(REPO_ROOT);
 
   // Parse + validate every manifest; collect ALL errors before bailing.
   const errors = [];
