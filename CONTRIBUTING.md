@@ -31,7 +31,7 @@ automatically.
 2. **Open source wherever it runs on the user's machine.** That covers `npx` and
    `uvx` packages, skills and templates, which must be public under an
    OSI-approved license. The repo must not contain binaries, minified or
-   obfuscated code, or install scripts.
+   obfuscated code, install scripts or symlinks.
 3. **A trustworthy MCP source.** In order of preference:
    1. The vendor's official package, or the vendor's own hosted endpoint for
       its own service. A vendor-operated remote endpoint may be closed source,
@@ -43,8 +43,9 @@ automatically.
    **Community-hosted remote endpoints are not accepted:** they would receive
    users' credentials and data, and nobody can verify their code. Servers
    launch with `npx` (npm) or `uvx` (PyPI), or connect to an `https://`
-   endpoint. Shell commands, `curl`, `docker` and local binaries are not
-   accepted *(CI)*.
+   endpoint, and `args` must start with a plain npm or PyPI package. Shell
+   commands, `curl`, `docker`, git URLs, local paths and custom registries
+   are not accepted *(CI)*.
 4. **Least privilege.** Ask only for the secrets the plugin needs, prefer
    read-only tokens, and document the scopes in the plugin README.
 5. **A useful plugin README.** It says what the plugin does, which secrets it

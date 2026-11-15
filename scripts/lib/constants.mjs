@@ -69,6 +69,22 @@ export const ALLOWED_STDIO_COMMANDS = Object.freeze(["npx", "uvx"]);
 /** MCP transports the marketplace accepts. */
 export const ALLOWED_TRANSPORTS = Object.freeze(["stdio", "http"]);
 
+/**
+ * Keys an MCP server entry may contain. Fleet forwards every key of a server
+ * entry to the agents unchanged, so anything else could smuggle in behaviour
+ * (e.g. a header helper that runs a command).
+ */
+export const MCP_SERVER_KEYS = Object.freeze(["type", "command", "args", "env", "url", "headers"]);
+
+/**
+ * `${env:VAR}` placeholders a plugin may use. Anything else could send the
+ * user's environment (cloud keys, tokens) to a server; use `${secret:KEY}`.
+ */
+export const ALLOWED_ENV_PLACEHOLDERS = Object.freeze(["HOME"]);
+
+/** Max size of `plugin.json` and `mcp.json`. */
+export const MAX_JSON_BYTES = 256 * 1024;
+
 /** Root-level component dirs from the legacy layout; the app rejects them. */
 export const LEGACY_ROOT_DIRS = Object.freeze(["skills", "commands", "prompts", "hooks"]);
 

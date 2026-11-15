@@ -31,7 +31,6 @@ my-plugin/
 ├── mcp.json                  MCP servers, for every agent with an MCP bridge
 ├── templates/
 │   └── <template>.md         agent templates
-├── icon.svg                  optional: or use an https:// icon URL
 └── .claude/                  per-agent components (see "Providers")
     ├── skills/<skill>/SKILL.md
     └── commands/<command>.md
@@ -40,6 +39,10 @@ my-plugin/
 Per-agent components live under the agent's vendor directory (`.claude/`,
 `.codex/`, `.grok/`, …). Root-level `skills/`, `commands/`, `prompts/` or
 `hooks/` folders are rejected; Fleet refuses to install them.
+
+Fleet copies the whole folder to users' machines, so keep it to the files
+above. Symlinks are rejected, and `plugin.json` and `mcp.json` may be at most
+256 KiB each.
 
 ## Manifest fields
 
@@ -51,15 +54,22 @@ Per-agent components live under the agent's vendor directory (`.claude/`,
 | `display_name` | yes | Name shown on the Browse card, proper casing | `"GitHub"` |
 | `version` | yes | Strict SemVer `X.Y.Z` (see [Versioning](#versioning)) | `"0.1.0"` |
 | `description` | yes | One line, at most 120 characters | `"Read issues, PRs and code in any GitHub repo."` |
-| `author` | yes | `{ "name": …, "url"?: … }`. For community plugins, that's you | `{ "name": "Jane Doe", "url": "https://github.com/jane" }` |
+| `author` | yes | `{ "name": …, "url"?: … }`; `url` must be `https://`. For community plugins, that's you | `{ "name": "Jane Doe", "url": "https://github.com/jane" }` |
 | `providers` | yes | Non-empty list of [provider ids](#providers), no duplicates | `["claude-code", "codex-cli"]` |
 | `tags` | yes | One or more of `productivity`, `infrastructure`, `data`, `dev` | `["productivity"]` |
-| `icon` | yes | An `https://` URL ([Iconify](https://icon-sets.iconify.design/) recommended) or a path to an image inside the plugin | `"https://api.iconify.design/logos:github-icon.svg"` |
+| `icon` | yes | An `https://` URL; [Iconify](https://icon-sets.iconify.design/) is recommended. Fleet does not render relative paths | `"https://api.iconify.design/logos:github-icon.svg"` |
 | `requires_secrets` | no | See [Secrets](#secrets) | `[]` |
 | `declares` | yes | Component counts; see [declares](#declares) | |
 | `homepage` | yes | An `https://` URL. For plugins in this repo use `https://github.com/fleetifydev/marketplace/tree/main/<name>` | |
 | `license` | yes | An SPDX identifier | `"MIT"` |
 | `min_fleetify_version` | no | SemVer; the oldest Fleet version the plugin supports | `"0.5.0"` |
+
+Fleet parses every manifest strictly, and a single bad one would break the
+whole catalog. CI therefore also rejects:
+
+- `provides`: Fleet derives it from `declares`.
+- Non-integer numbers, such as `1.0`.
+- Strings that are not well-formed Unicode.
 
 A complete example: [`github/.fleetify-plugin/plugin.json`](../github/.fleetify-plugin/plugin.json).
 
@@ -151,20 +161,30 @@ A vendor-hosted remote server:
 
 Rules:
 
+- **Server ids** must be the plugin's `name`, or start with `<name>-`. All
+  plugins' servers share one registry on the user's machine.
 - **`type`** is `stdio` or `http`.
-- **`stdio` servers launch with `npx` (npm) or `uvx` (PyPI).** `args` must name
-  the package. Shell commands, `curl`, `docker`, absolute paths and local
-  binaries are not accepted.
+- **`stdio` servers launch with `npx` (npm) or `uvx` (PyPI),** and `args` must
+  start with the package:
+  - `npx`: `["-y", "<package>[@version]", …server args]`. `-y`/`--yes` is the
+    only flag allowed before the package.
+  - `uvx`: `["<package>[==version]", …]`, or `["--from", "<package>[==version]", "<command>", …]`.
+
+  The package must be a plain npm or PyPI name. Git URLs, tarballs, local
+  paths, aliases and custom registries are rejected, as are shell commands,
+  `curl`, `docker` and local binaries.
 - **`http` servers** need an `https://` `url`. Only the vendor's own endpoint
   for its own service is accepted (see the acceptance criteria in
   [CONTRIBUTING.md](../CONTRIBUTING.md#what-we-accept)).
-- **Allowed keys** are `type`, `command`, `args`, `env`, `url` and `headers`.
-  `env` and `headers` are objects of strings.
+- **Allowed keys** are `type`, `command`, `args`, `env`, `url` and `headers`,
+  and any other key is an error, because Fleet passes every key through to the
+  agents. `env` and `headers` are objects of strings.
 - **Placeholders:**
   - `${secret:KEY}` is replaced with a secret the user enters at install. See
     [Secrets](#secrets).
-  - `${env:VAR}` reads an environment variable on the user's machine, for
-    example `${env:HOME}`.
+  - `${env:HOME}` is the user's home directory, and the only environment
+    variable a plugin may read, so a plugin can't send the user's environment
+    anywhere.
 
   No other `${…}` placeholder is allowed.
 - **Version pinning is optional.** You can pin with `pkg@1.2.3` (npm) or
@@ -187,8 +207,8 @@ becomes a field in Fleet's install dialog:
 ```
 
 - `key` is `UPPER_SNAKE_CASE` and unique within the plugin.
-- `label` is what the user sees. `url` (optional) links to the page where they
-  create the credential.
+- `label` is what the user sees. `url` (optional, `https://`) links to the page
+  where they create the credential.
 - Every `${secret:KEY}` in `mcp.json` must be declared here, and a declared key
   that is never used produces a warning.
 - Ask for the least privilege that works, and document the required scopes in

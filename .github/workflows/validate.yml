@@ -19,12 +19,16 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '22'
-      - name: Tooling tests
-        run: node --test "scripts/test/*.test.mjs"
+      # Every check runs even when an earlier one fails, so contributors see
+      # all problems (and the validator's inline annotations) in one run.
       - name: Validate plugins + marketplace.json in sync
+        if: ${{ !cancelled() }}
         run: node scripts/build-marketplace.mjs --check
       - name: Changed plugins bumped version + updated CHANGELOG
-        if: github.event_name == 'pull_request'
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/check-bump.mjs "$BASE_SHA"
+      - name: Tooling tests
+        if: ${{ !cancelled() }}
+        run: node --test "scripts/test/*.test.mjs"

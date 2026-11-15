@@ -5,24 +5,19 @@
  * No third-party dependencies.
  */
 
+import { MCP_SERVER_KEYS } from "./constants.mjs";
+
 const PLACEHOLDER_RE = /\$\{([^}]*)\}/g;
+
+// Registry package specs. Anything else (git URLs, tarballs, paths, aliases,
+// custom registries) is not a plain npm/PyPI package and must not parse.
+const NPM_SPEC_RE = /^((?:@[A-Za-z0-9][A-Za-z0-9._~-]*\/)?[A-Za-z0-9][A-Za-z0-9._~-]*)(?:@([0-9A-Za-z.^~<>=*+-]+))?$/;
+const PYPI_SPEC_RE = /^([A-Za-z0-9][A-Za-z0-9._-]*)(?:\[[A-Za-z0-9._,-]*\])?(?:(==|@)([0-9A-Za-z.*+!-]+))?$/;
 
 // npm: an exact version, never a range or dist-tag.
 const NPM_EXACT_RE = /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/;
 // PyPI: an exact release (PEP 440-ish), no wildcards.
 const PYPI_EXACT_RE = /^\d+(?:\.\d+)*[0-9A-Za-z.+-]*$/;
-
-/** uvx flags that consume the next argument. */
-const UVX_VALUE_FLAGS = new Set([
-  "--python",
-  "-p",
-  "--with",
-  "--with-requirements",
-  "--index",
-  "--index-url",
-  "--extra-index-url",
-  "--default-index",
-]);
 
 /**
  * Every `${…}` placeholder inside string values (objects and arrays walked
@@ -50,39 +45,13 @@ export function findPlaceholders(value) {
   return out;
 }
 
-function npxSpec(args) {
-  for (let i = 0; i < args.length; i++) {
-    const a = args[i];
-    if (a === "-p" || a === "--package") return args[i + 1] ?? null;
-    if (a.startsWith("--package=")) return a.slice("--package=".length);
-    if (a.startsWith("-")) continue;
-    return a;
-  }
-  return null;
-}
-
-function uvxSpec(args) {
-  for (let i = 0; i < args.length; i++) {
-    const a = args[i];
-    if (a === "--from") return args[i + 1] ?? null;
-    if (a.startsWith("--from=")) return a.slice("--from=".length);
-    if (UVX_VALUE_FLAGS.has(a)) {
-      i++;
-      continue;
-    }
-    if (a.startsWith("-")) continue;
-    return a;
-  }
-  return null;
-}
-
 function parseNpm(spec) {
-  const at = spec.lastIndexOf("@");
-  const name = at > 0 ? spec.slice(0, at) : spec;
-  const version = at > 0 ? spec.slice(at + 1) : null;
+  const m = typeof spec === "string" ? spec.match(NPM_SPEC_RE) : null;
+  if (!m) return null;
+  const version = m[2] ?? null;
   return {
     ecosystem: "npm",
-    name,
+    name: m[1],
     version,
     pinned: version !== null && NPM_EXACT_RE.test(version),
     latest: version === "latest",
@@ -90,36 +59,36 @@ function parseNpm(spec) {
 }
 
 function parsePypi(spec) {
-  const m = spec.match(/^([A-Za-z0-9._-]+)(?:\[[^\]]*\])?\s*(.*)$/);
-  if (!m) return { ecosystem: "pypi", name: spec, version: null, pinned: false, latest: false };
-  const name = m[1];
-  const rest = m[2].trim();
-  let op = null;
-  let version = null;
-  if (rest.startsWith("==")) [op, version] = ["==", rest.slice(2).trim()];
-  else if (rest.startsWith("@")) [op, version] = ["@", rest.slice(1).trim()];
-  else if (rest) version = rest;
+  const m = typeof spec === "string" ? spec.match(PYPI_SPEC_RE) : null;
+  if (!m) return null;
+  const op = m[2] ?? null;
+  const version = m[3] ?? null;
   const latest = version === "latest";
   const pinned = op !== null && !latest && version !== null && !version.includes("*") && PYPI_EXACT_RE.test(version);
-  return { ecosystem: "pypi", name, version, pinned, latest };
+  return { ecosystem: "pypi", name: m[1], version, pinned, latest };
 }
 
 /**
- * Which package a `stdio` server launches, and whether its version is pinned.
+ * Which registry package a `stdio` server launches, and whether its version
+ * is pinned. Only the plain shapes are recognized, and anything else returns
+ * null:
+ *   npx [-y|--yes]… <npm-package>[@version] [server args…]
+ *   uvx <pypi-package>[==version|@version] [server args…]
+ *   uvx --from <pypi-package>[==version] <command> [server args…]
  * @param {string} command
  * @param {string[]} args
  * @returns {{ ecosystem: "npm"|"pypi", name: string, version: string|null, pinned: boolean, latest: boolean } | null}
  */
 export function parsePackageSpec(command, args) {
-  if (!Array.isArray(args)) return null;
-  const strings = args.filter((a) => typeof a === "string");
+  if (!Array.isArray(args) || !args.every((a) => typeof a === "string")) return null;
   if (command === "npx") {
-    const spec = npxSpec(strings);
-    return spec ? parseNpm(spec) : null;
+    let i = 0;
+    while (args[i] === "-y" || args[i] === "--yes") i++;
+    return parseNpm(args[i]);
   }
   if (command === "uvx") {
-    const spec = uvxSpec(strings);
-    return spec ? parsePypi(spec) : null;
+    if (args[0] === "--from") return args.length >= 3 ? parsePypi(args[1]) : null;
+    return parsePypi(args[0]);
   }
   return null;
 }
@@ -133,11 +102,18 @@ export function summarizeServer(id, server) {
   const s = server && typeof server === "object" && !Array.isArray(server) ? server : {};
   const command = typeof s.command === "string" ? s.command : null;
   const args = Array.isArray(s.args) ? s.args.map(String) : [];
-  const keysOf = (o) => (o && typeof o === "object" && !Array.isArray(o) ? Object.keys(o) : []);
+  const mapOf = (o) =>
+    o && typeof o === "object" && !Array.isArray(o)
+      ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, typeof v === "string" ? v : JSON.stringify(v)]))
+      : {};
   const secretKeys = [];
+  const envReads = [];
   for (const p of findPlaceholders(s)) {
     if (p.kind === "secret" && !secretKeys.includes(p.key)) secretKeys.push(p.key);
+    if (p.kind === "env" && !envReads.includes(p.key)) envReads.push(p.key);
   }
+  const env = mapOf(s.env);
+  const headers = mapOf(s.headers);
   return {
     id,
     transport: typeof s.type === "string" ? s.type : null,
@@ -145,9 +121,14 @@ export function summarizeServer(id, server) {
     args,
     pkg: command ? parsePackageSpec(command, args) : null,
     url: typeof s.url === "string" ? s.url : null,
-    envKeys: keysOf(s.env),
+    env,
+    envKeys: Object.keys(env),
+    headers,
+    headerKeys: Object.keys(headers),
     secretKeys,
-    headerKeys: keysOf(s.headers),
+    envReads,
+    extraKeys: Object.keys(s).filter((k) => !MCP_SERVER_KEYS.includes(k)),
+    extras: Object.fromEntries(Object.entries(s).filter(([k]) => !MCP_SERVER_KEYS.includes(k))),
   };
 }
 

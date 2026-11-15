@@ -25,7 +25,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { discoverPluginDirs, readJson } from "./lib/catalog.mjs";
 import { emitGithubAnnotations, hasErrors, printIssues } from "./lib/issues.mjs";
-import { validatePlugin } from "./lib/validate.mjs";
+import { findDuplicateServerIds, validatePlugin } from "./lib/validate.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
@@ -81,11 +81,14 @@ function main() {
   // Validate every plugin; collect ALL issues before bailing.
   const issues = [];
   const manifests = new Map();
+  const servers = [];
   for (const dir of pluginDirs) {
     const result = validatePlugin(REPO_ROOT, dir);
     issues.push(...result.issues);
     if (result.manifest) manifests.set(dir, result.manifest);
+    servers.push({ dir, serverIds: result.serverIds });
   }
+  issues.push(...findDuplicateServerIds(servers));
 
   // Featured entries must reference real plugin dirs.
   for (const f of meta.featured) {

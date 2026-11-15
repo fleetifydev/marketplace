@@ -39,12 +39,16 @@ jobs:
           node scripts/security-report.mjs "$BASE_SHA" "$HEAD_SHA" > report.md
           node scripts/security-report.mjs "$BASE_SHA" "$HEAD_SHA" --json > report.json
           cat report.md >> "$GITHUB_STEP_SUMMARY"
-      - name: Upsert the sticky comment and add labels
+      - name: Add labels, then upsert the sticky comment
         env:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
+          # Labels first: they must land even if the comment call fails.
+          for label in $(jq -r '.labels[]' report.json); do
+            gh api --method POST "repos/$REPO/issues/$PR_NUMBER/labels" -f "labels[]=$label" > /dev/null
+          done
           marker='<!-- fleetify-security-review -->'
           # Only ever edit our own comment, never one a user wrote with the marker.
           comment_id=$(gh api --paginate "repos/$REPO/issues/$PR_NUMBER/comments" \
@@ -54,6 +58,3 @@ jobs:
           elif [ "$(jq -r '.reportable' report.json)" = "true" ]; then
             gh api --method POST "repos/$REPO/issues/$PR_NUMBER/comments" -F body=@report.md > /dev/null
           fi
-          for label in $(jq -r '.labels[]' report.json); do
-            gh api --method POST "repos/$REPO/issues/$PR_NUMBER/labels" -f "labels[]=$label" > /dev/null
-          done

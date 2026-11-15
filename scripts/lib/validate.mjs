@@ -14,6 +14,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
+  ALLOWED_ENV_PLACEHOLDERS,
   ALLOWED_STDIO_COMMANDS,
   ALLOWED_TAGS,
   ALLOWED_TRANSPORTS,
@@ -24,6 +25,8 @@ import {
   LEGACY_ROOT_DIRS,
   MANIFEST_SUBPATH,
   MARKETPLACE_TREE_URL,
+  MAX_JSON_BYTES,
+  MCP_SERVER_KEYS,
   NAME_RE,
   REFERENCE_DOC_URL,
   SCAFFOLD_MARKER,
@@ -33,7 +36,6 @@ import {
 } from "./constants.mjs";
 import { findPlaceholders, parsePackageSpec } from "./mcp.mjs";
 
-const SERVER_KEYS = new Set(["type", "command", "args", "env", "url", "headers"]);
 const VENDOR_DIR_NAMES = [...new Set(Object.values(VENDOR_DIRS))];
 const ALLOWED_DOT_DIRS = new Set([".fleetify-plugin", ".fleetify", ...VENDOR_DIR_NAMES]);
 
@@ -61,18 +63,73 @@ function isFile(p) {
   }
 }
 
-function loadJson(abs) {
+/** Every non-integer number token in raw JSON text (strings skipped). */
+function nonIntegerNumbers(raw) {
+  const found = [];
+  for (let i = 0; i < raw.length; i++) {
+    const c = raw[i];
+    if (c === '"') {
+      for (i++; i < raw.length && raw[i] !== '"'; i++) if (raw[i] === "\\") i++;
+    } else if (c === "-" || (c >= "0" && c <= "9")) {
+      const m = raw.slice(i).match(/^-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/);
+      if (m) {
+        if (/[.eE]/.test(m[0])) found.push(m[0]);
+        i += m[0].length - 1;
+      }
+    }
+  }
+  return found;
+}
+
+/** JSON paths of keys or string values that are not well-formed Unicode. */
+function malformedStrings(value, at = "$") {
+  const out = [];
+  if (typeof value === "string") {
+    if (!value.isWellFormed()) out.push(at);
+  } else if (Array.isArray(value)) {
+    value.forEach((v, i) => out.push(...malformedStrings(v, `${at}[${i}]`)));
+  } else if (value && typeof value === "object") {
+    for (const [k, v] of Object.entries(value)) {
+      if (!k.isWellFormed()) out.push(`${at} (a key)`);
+      out.push(...malformedStrings(v, `${at}.${k.isWellFormed() ? k : "?"}`));
+    }
+  }
+  return out;
+}
+
+/**
+ * Read and parse a JSON file the way Fleet will: strictly. Returns `{ error }`
+ * when unusable, else `{ value, problems }` (problems don't stop validation).
+ * @param {string} abs
+ * @param {{ integersOnly?: boolean }} [opts]
+ */
+function loadJson(abs, { integersOnly = false } = {}) {
   let raw;
   try {
+    const size = fs.statSync(abs).size;
+    if (size > MAX_JSON_BYTES) {
+      return { error: `is too large (${Math.ceil(size / 1024)} KiB, max ${MAX_JSON_BYTES / 1024} KiB)` };
+    }
     raw = fs.readFileSync(abs, "utf8");
   } catch (err) {
     return { error: `cannot be read (${err.code || err.message})` };
   }
+  let value;
   try {
-    return { value: JSON.parse(raw) };
+    value = JSON.parse(raw);
   } catch (err) {
     return { error: `invalid JSON (${err.message}) — fix the JSON syntax` };
   }
+  const problems = [];
+  for (const at of malformedStrings(value)) {
+    problems.push(`contains a string that is not well-formed Unicode (an unpaired surrogate) at ${at} — Fleet's strict JSON parser would reject the whole catalog`);
+  }
+  if (integersOnly) {
+    for (const n of nonIntegerNumbers(raw)) {
+      problems.push(`${JSON.stringify(n)} is not an integer — numbers in plugin.json must be whole numbers (e.g. 1, not 1.0)`);
+    }
+  }
+  return { value, problems };
 }
 
 /** Number of `<name>/SKILL.md` skill dirs directly under `dir`. */
@@ -88,17 +145,46 @@ function countFiles(dir, ext) {
   return fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isFile() && e.name.endsWith(ext)).length;
 }
 
-/** Every file under `dir`, as paths relative to `dir` (sorted, recursive). */
-function walkFiles(dir, prefix = "") {
-  const out = [];
+/**
+ * Every regular file and symlink under `dir`, as paths relative to `dir`
+ * (sorted, recursive, symlinks never followed).
+ * @returns {{ files: string[], symlinks: string[] }}
+ */
+function walkFiles(dir, prefix = "", out = { files: [], symlinks: [] }) {
   const entries = fs.readdirSync(path.join(dir, prefix), { withFileTypes: true });
   entries.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
   for (const e of entries) {
     const rel = prefix ? path.join(prefix, e.name) : e.name;
-    if (e.isDirectory()) out.push(...walkFiles(dir, rel));
-    else if (e.isFile()) out.push(rel);
+    if (e.isSymbolicLink()) out.symlinks.push(rel);
+    else if (e.isDirectory()) walkFiles(dir, rel, out);
+    else if (e.isFile()) out.files.push(rel);
   }
   return out;
+}
+
+/**
+ * Cross-plugin check: MCP server ids share one registry on users' machines,
+ * so an id defined by two plugins lets one overwrite the other.
+ * @param {Array<{ dir: string, serverIds: string[] }>} entries
+ * @returns {Issue[]}
+ */
+export function findDuplicateServerIds(entries) {
+  const owner = new Map();
+  const issues = [];
+  for (const { dir, serverIds } of entries) {
+    for (const id of serverIds) {
+      if (owner.has(id)) {
+        issues.push({
+          level: "error",
+          file: `${dir}/mcp.json`,
+          message: `server id ${q(id)} is also defined by ${owner.get(id)} — MCP server ids must be unique across the catalog`,
+        });
+      } else {
+        owner.set(id, dir);
+      }
+    }
+  }
+  return issues;
 }
 
 /**
@@ -142,27 +228,34 @@ export function effectiveCommandDir(pluginDir, provider) {
  * Validate `<repoRoot>/<dirName>`.
  * @param {string} repoRoot
  * @param {string} dirName
- * @returns {{ manifest: object|null, issues: Issue[] }}
+ * @returns {{ manifest: object|null, issues: Issue[], serverIds: string[] }}
  */
 export function validatePlugin(repoRoot, dirName) {
   const pluginDir = path.join(repoRoot, dirName);
   /** @type {Issue[]} */
   const issues = [];
+  /** @type {string[]} */
+  const serverIds = [];
   const rel = (...segs) => [dirName, ...segs.flatMap((s) => s.split(path.sep))].join("/");
   const relOf = (abs) => rel(path.relative(pluginDir, abs));
   const MF = rel(MANIFEST_SUBPATH);
   const error = (file, message) => issues.push({ level: "error", file, message });
   const warning = (file, message) => issues.push({ level: "warning", file, message });
+  const isHttpsUrl = (v) => typeof v === "string" && v.startsWith("https://");
 
-  const loaded = loadJson(path.join(pluginDir, MANIFEST_SUBPATH));
+  const loaded = loadJson(path.join(pluginDir, MANIFEST_SUBPATH), { integersOnly: true });
   if (loaded.error) {
     error(MF, loaded.error);
-    return { manifest: null, issues };
+    return { manifest: null, issues, serverIds };
   }
+  for (const problem of loaded.problems) error(MF, problem);
   const manifest = loaded.value;
   if (!isPlainObject(manifest)) {
     error(MF, "manifest must be a JSON object");
-    return { manifest: null, issues };
+    return { manifest: null, issues, serverIds };
+  }
+  if (manifest.provides !== undefined) {
+    error(MF, `"provides" must not be set — Fleet derives it from "declares"; remove the field`);
   }
 
   // ── identity (mirrors the app) ───────────────────────────────────────────
@@ -211,8 +304,8 @@ export function validatePlugin(repoRoot, dirName) {
   }
   if (!isPlainObject(manifest.author) || !nonEmpty(manifest.author.name)) {
     error(MF, `"author.name" must be a non-empty string — the person or organization maintaining the plugin${see("manifest-fields")}`);
-  } else if (manifest.author.url !== undefined && typeof manifest.author.url !== "string") {
-    error(MF, `"author.url" must be a string when present (got ${q(manifest.author.url)})`);
+  } else if (manifest.author.url !== undefined && !isHttpsUrl(manifest.author.url)) {
+    error(MF, `"author.url" must be an https:// URL when present (got ${q(manifest.author.url)})`);
   }
   if (!Array.isArray(manifest.tags) || manifest.tags.length === 0) {
     error(MF, `"tags" must be a non-empty array — allowed: ${ALLOWED_TAGS.join(", ")}${see("manifest-fields")}`);
@@ -223,20 +316,8 @@ export function validatePlugin(repoRoot, dirName) {
       }
     });
   }
-  const { icon } = manifest;
-  if (!nonEmpty(icon)) {
-    error(MF, `"icon" must be an https:// URL or a path to an image inside the plugin${see("manifest-fields")}`);
-  } else if (/^[a-z][a-z0-9+.-]*:/i.test(icon)) {
-    if (!icon.startsWith("https://")) {
-      error(MF, `"icon" must be an https:// URL or a path to an image inside the plugin (got ${q(icon)})`);
-    }
-  } else {
-    const abs = path.resolve(pluginDir, icon);
-    if (path.isAbsolute(icon) || !abs.startsWith(path.resolve(pluginDir) + path.sep)) {
-      error(MF, `"icon" path ${q(icon)} must stay inside the plugin directory`);
-    } else if (!isFile(abs)) {
-      error(MF, `"icon" points to ${q(icon)}, which does not exist in the plugin — add the file or use an https:// URL`);
-    }
+  if (!isHttpsUrl(manifest.icon)) {
+    error(MF, `"icon" must be an https:// URL, e.g. https://api.iconify.design/logos:github-icon.svg — Fleet does not render relative icon paths (got ${q(manifest.icon)})${see("manifest-fields")}`);
   }
   if (!nonEmpty(manifest.homepage) || !manifest.homepage.startsWith("https://")) {
     error(MF, `"homepage" must be an https:// URL (got ${q(manifest.homepage)}) — for plugins in this repo use ${MARKETPLACE_TREE_URL}/${dirName}`);
@@ -270,8 +351,8 @@ export function validatePlugin(repoRoot, dirName) {
         if (typeof entry.label !== "string" || entry.label.length === 0) {
           error(MF, `${field("label")} must be a non-empty string (got ${q(entry.label)})`);
         }
-        if (Object.prototype.hasOwnProperty.call(entry, "url") && typeof entry.url !== "string") {
-          error(MF, `${field("url")} must be a string when present (got ${q(entry.url)})`);
+        if (Object.prototype.hasOwnProperty.call(entry, "url") && !isHttpsUrl(entry.url)) {
+          error(MF, `${field("url")} must be an https:// URL when present — it is the "get a token" link in the install dialog (got ${q(entry.url)})`);
         }
       });
     }
@@ -316,7 +397,11 @@ export function validatePlugin(repoRoot, dirName) {
       error(rel("CHANGELOG.md"), `CHANGELOG.md has no "## [${version}]" section — add one for the current version (see CHANGELOG_TEMPLATE.md)`);
     }
   }
-  for (const f of walkFiles(pluginDir)) {
+  const { files, symlinks } = walkFiles(pluginDir);
+  for (const link of symlinks) {
+    error(rel(link), "symlinks are not allowed — commit the file itself (Fleet's installer follows symlinks on the user's machine)");
+  }
+  for (const f of files) {
     if (!f.endsWith(".md") && !f.endsWith(".json")) continue;
     if (fs.readFileSync(path.join(pluginDir, f), "utf8").includes(SCAFFOLD_MARKER)) {
       error(rel(f), `still contains the scaffold marker ${SCAFFOLD_MARKER} — replace every ${SCAFFOLD_MARKER} placeholder with real content`);
@@ -332,6 +417,7 @@ export function validatePlugin(repoRoot, dirName) {
   if (isFile(mcpPath)) {
     mcpExists = true;
     const mcp = loadJson(mcpPath);
+    for (const problem of mcp.problems || []) error(MCP, problem);
     if (mcp.error) {
       error(MCP, mcp.error);
       mcpCount = null;
@@ -344,12 +430,18 @@ export function validatePlugin(repoRoot, dirName) {
       if (mcpCount === 0) error(MCP, `mcp.json defines no servers — add a server or delete mcp.json${see("mcpjson")}`);
       for (const [id, server] of entries) {
         const at = `server ${q(id)}`;
+        serverIds.push(id);
+        if (id !== dirName && !id.startsWith(`${dirName}-`)) {
+          error(MCP, `server id ${q(id)} must be ${q(dirName)} or start with ${q(`${dirName}-`)} — server ids share one registry across all plugins${see("mcpjson")}`);
+        }
         if (!isPlainObject(server)) {
           error(MCP, `${at} must be an object`);
           continue;
         }
         for (const k of Object.keys(server)) {
-          if (!SERVER_KEYS.has(k)) warning(MCP, `${at}: unknown key ${q(k)} — Fleet ignores it`);
+          if (!MCP_SERVER_KEYS.includes(k)) {
+            error(MCP, `${at}: unknown key ${q(k)} — Fleet passes every key to the agents, so only ${MCP_SERVER_KEYS.join(", ")} are allowed${see("mcpjson")}`);
+          }
         }
         if (!ALLOWED_TRANSPORTS.includes(server.type)) {
           error(MCP, `${at}: "type" must be one of ${ALLOWED_TRANSPORTS.join(", ")} (got ${q(server.type)})${see("mcpjson")}`);
@@ -362,8 +454,12 @@ export function validatePlugin(repoRoot, dirName) {
           }
           if (!isStringArray(server.args)) {
             error(MCP, `${at}: "args" must be an array of strings`);
-          } else if (allowed && !parsePackageSpec(server.command, server.args)) {
-            error(MCP, `${at}: "args" must name the package to launch, e.g. ["-y", "@scope/server"]${see("mcpjson")}`);
+          } else if (
+            allowed &&
+            !parsePackageSpec(server.command, server.args) &&
+            !server.args.some((a) => a.includes(SCAFFOLD_MARKER)) // already reported as a leftover placeholder
+          ) {
+            error(MCP, `${at}: "args" must start with the package to launch — npx allows only -y before it, uvx only --from <package>, and the package must come from npm or PyPI (e.g. ["-y", "@scope/server"])${see("mcpjson")}`);
           }
           if (server.env !== undefined && !isStringMap(server.env)) {
             error(MCP, `${at}: "env" must be an object of string values`);
@@ -383,7 +479,9 @@ export function validatePlugin(repoRoot, dirName) {
         if (reported.has(p.raw)) continue;
         reported.add(p.raw);
         if (p.kind === "unknown") {
-          error(MCP, `unsupported placeholder ${p.raw} — use \${secret:KEY} or \${env:VAR}${see("secrets")}`);
+          error(MCP, `unsupported placeholder ${p.raw} — use \${secret:KEY} or \${env:HOME}${see("secrets")}`);
+        } else if (p.kind === "env" && !ALLOWED_ENV_PLACEHOLDERS.includes(p.key)) {
+          error(MCP, `${p.raw} is not allowed — only ${ALLOWED_ENV_PLACEHOLDERS.map((k) => `\${env:${k}}`).join(", ")} may be read from the user's environment; ask for credentials with \${secret:KEY}${see("mcpjson")}`);
         } else if (p.kind === "secret" && !secretKeys.has(p.key)) {
           error(MCP, `${p.raw} is not declared in "requires_secrets" — add { "key": "${p.key}", "label": "…" } to plugin.json${see("secrets")}`);
         }
@@ -402,7 +500,7 @@ export function validatePlugin(repoRoot, dirName) {
   const { declares } = manifest;
   if (!isPlainObject(declares)) {
     error(MF, `"declares" must be present and an object (got ${q(declares)})${see("declares")}`);
-    return { manifest, issues };
+    return { manifest, issues, serverIds };
   }
   const count = (obj, field, label) => {
     const v = obj[field];
@@ -438,7 +536,7 @@ export function validatePlugin(repoRoot, dirName) {
 
   if (declares.providers !== undefined && !isPlainObject(declares.providers)) {
     error(MF, `"declares.providers" must be an object keyed by provider id${see("declares")}`);
-    return { manifest, issues };
+    return { manifest, issues, serverIds };
   }
   const perProvider = declares.providers || {};
   for (const key of Object.keys(perProvider)) {
@@ -473,5 +571,5 @@ export function validatePlugin(repoRoot, dirName) {
     }
   }
 
-  return { manifest, issues };
+  return { manifest, issues, serverIds };
 }

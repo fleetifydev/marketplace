@@ -1,12 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
-import { fileURLToPath } from "node:url";
 import { discoverPluginDirs, readJson } from "../lib/catalog.mjs";
 import { makeTempDir, writeTree } from "./helpers.mjs";
 
-const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const M = ".fleetify-plugin/plugin.json";
 
 test("discoverPluginDirs finds only top-level dirs with a manifest, sorted, skipping ignored and dot dirs", (t) => {
@@ -35,22 +32,6 @@ test("readJson reports an unreadable file with the file path", (t) => {
   assert.throws(() => readJson(path.join(root, "missing.json")), /cannot read .*missing\.json/);
 });
 
-test("every plugin in the real catalog passes with zero errors", async () => {
-  const { validatePlugin } = await import("../lib/validate.mjs");
-  const errors = [];
-  for (const dir of discoverPluginDirs(REPO_ROOT)) {
-    for (const issue of validatePlugin(REPO_ROOT, dir).issues) {
-      if (issue.level === "error") errors.push(`${issue.file}: ${issue.message}`);
-    }
-  }
-  assert.deepEqual(errors, []);
-});
-
-test("build-marketplace --check passes on the real catalog", () => {
-  const r = spawnSync(process.execPath, ["scripts/build-marketplace.mjs", "--check"], {
-    cwd: REPO_ROOT,
-    encoding: "utf8",
-  });
-  assert.equal(r.status, 0, r.stderr);
-  assert.match(r.stdout, /OK {2}marketplace\.json in sync — \d+ plugins/);
-});
+// The real catalog is checked by CI's own `build-marketplace.mjs --check`
+// step; unit tests stay hermetic so a plugin problem never shows up as a
+// "tooling tests" failure.
