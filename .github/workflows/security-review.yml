@@ -1,0 +1,59 @@
+name: security-review
+# SECURITY INVARIANT — read before editing.
+# This workflow runs on pull_request_target: it has a write-scoped token even
+# for PRs from forks. It must NEVER check out, install, build, or execute code
+# from the pull request. It runs the BASE branch's scripts/security-report.mjs,
+# which reads the PR's files as data through `git show` only. Untrusted values
+# (branch names, titles, file contents) never go into `run:` via ${{ }};
+# only numeric ids and SHAs are passed, through `env:`.
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+concurrency:
+  group: security-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 — base branch, trusted code only
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Fetch the PR head as data (never checked out)
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: git fetch --no-tags origin "+refs/pull/${PR_NUMBER}/head:refs/remotes/pr/head"
+      - name: Build the report
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          node scripts/security-report.mjs "$BASE_SHA" "$HEAD_SHA" > report.md
+          node scripts/security-report.mjs "$BASE_SHA" "$HEAD_SHA" --json > report.json
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upsert the sticky comment and add labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          marker='<!-- fleetify-security-review -->'
+          # Only ever edit our own comment, never one a user wrote with the marker.
+          comment_id=$(gh api --paginate "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq ".[] | select(.user.login == \"github-actions[bot]\" and (.body | startswith(\"$marker\"))) | .id" | head -n 1)
+          if [ -n "$comment_id" ]; then
+            gh api --method PATCH "repos/$REPO/issues/comments/$comment_id" -F body=@report.md > /dev/null
+          elif [ "$(jq -r '.reportable' report.json)" = "true" ]; then
+            gh api --method POST "repos/$REPO/issues/$PR_NUMBER/comments" -F body=@report.md > /dev/null
+          fi
+          for label in $(jq -r '.labels[]' report.json); do
+            gh api --method POST "repos/$REPO/issues/$PR_NUMBER/labels" -f "labels[]=$label" > /dev/null
+          done

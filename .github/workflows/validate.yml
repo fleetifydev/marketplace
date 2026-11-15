@@ -3,18 +3,28 @@ on:
   pull_request:
   push:
     branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '20'
-      - name: Validate manifests + marketplace.json in sync
+          node-version: '22'
+      - name: Tooling tests
+        run: node --test "scripts/test/*.test.mjs"
+      - name: Validate plugins + marketplace.json in sync
         run: node scripts/build-marketplace.mjs --check
       - name: Changed plugins bumped version + updated CHANGELOG
         if: github.event_name == 'pull_request'
-        run: node scripts/check-bump.mjs "${{ github.event.pull_request.base.sha }}"
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/check-bump.mjs "$BASE_SHA"

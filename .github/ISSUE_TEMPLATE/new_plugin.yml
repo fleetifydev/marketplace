@@ -1,0 +1,67 @@
+name: New plugin proposal
+description: Propose a plugin for the catalog (recommended before opening a PR)
+labels: ["new-plugin"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the acceptance criteria in CONTRIBUTING.md first:
+        https://github.com/fleetifydev/marketplace/blob/main/CONTRIBUTING.md#what-we-accept
+        A maintainer will confirm whether the plugin fits before you invest time in it.
+  - type: input
+    id: service
+    attributes:
+      label: Service or tool
+      placeholder: Acme Cloud
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What would the plugin let an agent do?
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Plugin type
+      options:
+        - MCP server
+        - Skill
+        - Agent template
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Package or endpoint
+      description: The npm or PyPI package, or the vendor's own https:// MCP endpoint.
+      placeholder: "@acme/mcp-server"
+    validations:
+      required: true
+  - type: dropdown
+    id: maintainer
+    attributes:
+      label: Who maintains it?
+      options:
+        - The service's vendor (official)
+        - A community project
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Source repository and license
+      description: Leave empty only for a closed-source endpoint hosted by the vendor itself.
+      placeholder: https://github.com/acme/mcp-server (MIT)
+  - type: textarea
+    id: secrets
+    attributes:
+      label: Secrets it needs
+      description: Which credentials, which scopes, and where users create them. Write "none" if it needs none.
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to open the pull request myself
