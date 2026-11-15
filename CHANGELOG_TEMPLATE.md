@@ -32,7 +32,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/). Versioning: [SemVer](ht
   the ISO date are the shape Fleet parses — keep them.
 - **Bump and document together.** When you bump `version` in
   `.fleetify-plugin/plugin.json`, add a matching `## [X.Y.Z]` section
-  here. CI enforces this (see the repo README's *CI* section); a
+  here. CI enforces this (see
+  [CONTRIBUTING.md](CONTRIBUTING.md#check-your-change-locally)); a
   CHANGELOG-only edit needs no version bump.
 - **Group changes under the standard categories** (omit any you don't
   need). Fleet renders each as a labeled group:

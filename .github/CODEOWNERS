@@ -1,0 +1,10 @@
+# Fleetify maintainers review and approve every change to the catalog.
+# See CONTRIBUTING.md, "Review process".
+*                @fleetifydev/marketplace-maintainers
+
+# Security-sensitive paths, listed explicitly so the intent survives edits to
+# the default rule above. Changes here alter what runs on users' machines or
+# what CI enforces, and get line-by-line review.
+/scripts/        @fleetifydev/marketplace-maintainers
+/.github/        @fleetifydev/marketplace-maintainers
+**/mcp.json      @fleetifydev/marketplace-maintainers

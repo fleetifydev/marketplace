@@ -23,139 +23,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { discoverPluginDirs, readJson } from "./lib/catalog.mjs";
+import { emitGithubAnnotations, hasErrors, printIssues } from "./lib/issues.mjs";
+import { findDuplicateServerIds, validatePlugin } from "./lib/validate.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
 const META_PATH = path.join(SCRIPT_DIR, "marketplace.meta.json");
 const OUTPUT_PATH = path.join(REPO_ROOT, "marketplace.json");
-const MANIFEST_SUBPATH = path.join(".fleetify-plugin", "plugin.json");
-
-/** Directory names that are never plugins. */
-const IGNORED_DIRS = new Set([".git", "scripts", "node_modules"]);
-
-const NAME_RE = /^[a-z0-9][a-z0-9-]*$/;
-
-// Strict semver: X.Y.Z with optional -prerelease and +build.
-// Numeric identifiers (major/minor/patch and numeric pre-release identifiers)
-// must not contain leading zeros. Mirrors the official semver.org pattern.
-const SEMVER_RE =
-  /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*)(?:\.(?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*))*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$/;
-
-/**
- * Read + JSON.parse a file, throwing a contextualized error on failure.
- * @param {string} filePath
- * @returns {*}
- */
-function readJson(filePath) {
-  let raw;
-  try {
-    raw = fs.readFileSync(filePath, "utf8");
-  } catch (err) {
-    throw new Error(`cannot read ${filePath}: ${err.message}`);
-  }
-  try {
-    return JSON.parse(raw);
-  } catch (err) {
-    throw new Error(`invalid JSON in ${filePath}: ${err.message}`);
-  }
-}
-
-/**
- * Enumerate top-level plugin directory names (those containing a manifest at
- * `<dir>/.fleetify-plugin/plugin.json`). Skips ignored dirs, dotfiles, and
- * non-directories. Returned sorted ascending.
- * @returns {string[]}
- */
-function discoverPluginDirs() {
-  const entries = fs.readdirSync(REPO_ROOT, { withFileTypes: true });
-  const dirs = [];
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-    const name = entry.name;
-    if (name.startsWith(".")) continue;
-    if (IGNORED_DIRS.has(name)) continue;
-    const manifestPath = path.join(REPO_ROOT, name, MANIFEST_SUBPATH);
-    if (fs.existsSync(manifestPath)) dirs.push(name);
-  }
-  dirs.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
-  return dirs;
-}
-
-/**
- * Validate a single parsed manifest against the marketplace contract.
- * Pushes human-readable messages onto `errors`; never throws for data issues.
- * @param {string} dir   the plugin directory name
- * @param {*} manifest   the parsed plugin.json
- * @param {string[]} errors
- */
-function validateManifest(dir, manifest, errors) {
-  const where = `${dir}/${MANIFEST_SUBPATH}`;
-  const fail = (msg) => errors.push(`${where}: ${msg}`);
-
-  if (manifest === null || typeof manifest !== "object" || Array.isArray(manifest)) {
-    fail("manifest must be a JSON object");
-    return;
-  }
-
-  // name: kebab-ish and equal to the directory name.
-  const { name } = manifest;
-  if (typeof name !== "string" || !NAME_RE.test(name)) {
-    fail(`"name" must match /^[a-z0-9][a-z0-9-]*$/ (got ${JSON.stringify(name)})`);
-  } else if (name !== dir) {
-    fail(`"name" (${JSON.stringify(name)}) must equal the directory name (${JSON.stringify(dir)})`);
-  }
-
-  // version: strict semver.
-  const { version } = manifest;
-  if (typeof version !== "string" || !SEMVER_RE.test(version)) {
-    fail(
-      `"version" must be strict semver X.Y.Z (optional -pre/+build, no leading zeros) (got ${JSON.stringify(version)})`
-    );
-  }
-
-  // providers: non-empty array of strings.
-  const { providers } = manifest;
-  if (!Array.isArray(providers) || providers.length === 0) {
-    fail(`"providers" must be a non-empty array (got ${JSON.stringify(providers)})`);
-  } else {
-    providers.forEach((p, i) => {
-      if (typeof p !== "string" || p.length === 0) {
-        fail(`"providers[${i}]" must be a non-empty string (got ${JSON.stringify(p)})`);
-      }
-    });
-  }
-
-  // declares: present and an object.
-  const { declares } = manifest;
-  if (declares === null || typeof declares !== "object" || Array.isArray(declares)) {
-    fail(`"declares" must be present and an object (got ${JSON.stringify(declares)})`);
-  }
-
-  // requires_secrets: if present, array of {key, label, url?}.
-  if (Object.prototype.hasOwnProperty.call(manifest, "requires_secrets")) {
-    const rs = manifest.requires_secrets;
-    if (!Array.isArray(rs)) {
-      fail(`"requires_secrets" must be an array when present (got ${JSON.stringify(rs)})`);
-    } else {
-      rs.forEach((entry, i) => {
-        const at = `"requires_secrets[${i}]"`;
-        if (entry === null || typeof entry !== "object" || Array.isArray(entry)) {
-          fail(`${at} must be an object (got ${JSON.stringify(entry)})`);
-          return;
-        }
-        if (typeof entry.key !== "string" || entry.key.length === 0) {
-          fail(`${at}.key must be a non-empty string (got ${JSON.stringify(entry.key)})`);
-        }
-        if (typeof entry.label !== "string" || entry.label.length === 0) {
-          fail(`${at}.label must be a non-empty string (got ${JSON.stringify(entry.label)})`);
-        }
-        if (Object.prototype.hasOwnProperty.call(entry, "url") && typeof entry.url !== "string") {
-          fail(`${at}.url must be a string when present (got ${JSON.stringify(entry.url)})`);
-        }
-      });
-    }
-  }
-}
 
 /**
  * Validate the editorial meta file. Returns the parsed meta.
@@ -201,36 +76,39 @@ function main() {
   const meta = loadMeta();
   const featuredSet = new Set(meta.featured);
 
-  const pluginDirs = discoverPluginDirs();
+  const pluginDirs = discoverPluginDirs(REPO_ROOT);
 
-  // Parse + validate every manifest; collect ALL errors before bailing.
-  const errors = [];
+  // Validate every plugin; collect ALL issues before bailing.
+  const issues = [];
   const manifests = new Map();
+  const servers = [];
   for (const dir of pluginDirs) {
-    const manifestPath = path.join(REPO_ROOT, dir, MANIFEST_SUBPATH);
-    let manifest;
-    try {
-      manifest = readJson(manifestPath);
-    } catch (err) {
-      errors.push(err.message);
-      continue;
-    }
-    manifests.set(dir, manifest);
-    validateManifest(dir, manifest, errors);
+    const result = validatePlugin(REPO_ROOT, dir);
+    issues.push(...result.issues);
+    if (result.manifest) manifests.set(dir, result.manifest);
+    servers.push({ dir, serverIds: result.serverIds });
   }
+  issues.push(...findDuplicateServerIds(servers));
 
   // Featured entries must reference real plugin dirs.
   for (const f of meta.featured) {
     if (!pluginDirs.includes(f)) {
-      errors.push(`marketplace.meta.json: featured plugin "${f}" has no matching plugin directory`);
+      issues.push({
+        level: "error",
+        file: "scripts/marketplace.meta.json",
+        message: `featured plugin "${f}" has no matching plugin directory`,
+      });
     }
   }
 
-  if (errors.length) {
-    console.error(`Validation failed with ${errors.length} error(s):`);
-    for (const e of errors) console.error(`  - ${e}`);
+  emitGithubAnnotations(issues);
+  if (hasErrors(issues)) {
+    const count = issues.filter((i) => i.level === "error").length;
+    console.error(`Validation failed with ${count} error(s):`);
+    printIssues(issues);
     process.exit(1);
   }
+  printIssues(issues); // warnings only, if any
 
   // Build the document. Plugin dirs are already sorted ascending.
   const plugins = pluginDirs.map((dir) => ({

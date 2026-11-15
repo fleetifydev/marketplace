@@ -1,0 +1,26 @@
+name: Improvement or other request
+description: Suggest an improvement to a plugin, the docs or the tooling
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - A plugin
+        - Docs
+        - Tooling / CI
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin (if any)
+      placeholder: github
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to change, and why?
+    validations:
+      required: true
