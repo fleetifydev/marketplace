@@ -128,6 +128,17 @@ test("an Iconify icon uses the /prefix/name.svg URL, not prefix:name", (t) => {
     "error",
     /https:\/\/api\.iconify\.design\/logos\/github-icon\.svg/,
   );
+  // A query or a fragment doesn't hide the old form, and the suggestion keeps it.
+  expectIssue(
+    run(t, mcpPluginFiles(P, { manifest: { icon: "https://api.iconify.design/mdi:home.svg?color=red" } })),
+    "error",
+    /use https:\/\/api\.iconify\.design\/mdi\/home\.svg\?color=red/,
+  );
+  expectIssue(
+    run(t, mcpPluginFiles(P, { manifest: { icon: "https://api.iconify.design/logos:github-icon.svg#icon" } })),
+    "error",
+    /use https:\/\/api\.iconify\.design\/logos\/github-icon\.svg#icon/,
+  );
   expectClean(run(t, mcpPluginFiles(P, { manifest: { icon: "https://api.iconify.design/logos/github-icon.svg" } })));
 });
 
