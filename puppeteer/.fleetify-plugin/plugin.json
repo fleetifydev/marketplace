@@ -1,7 +1,7 @@
 {
   "name": "puppeteer",
   "display_name": "Puppeteer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Headless-Chrome browser control: navigate, click, screenshot, extract text.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:puppeteer.svg",
+  "icon": "https://api.iconify.design/logos/puppeteer.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

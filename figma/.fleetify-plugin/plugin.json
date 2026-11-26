@@ -1,7 +1,7 @@
 {
   "name": "figma",
   "display_name": "Figma",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read frames, components, and design tokens from any Figma file.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:figma.svg",
+  "icon": "https://api.iconify.design/logos/figma.svg",
   "requires_secrets": [
     {
       "key": "FIGMA_TOKEN",

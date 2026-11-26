@@ -1,7 +1,7 @@
 {
   "name": "docker",
   "display_name": "Docker",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "List containers, inspect images, tail logs — local Docker daemon over the socket.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:docker-icon.svg",
+  "icon": "https://api.iconify.design/logos/docker-icon.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

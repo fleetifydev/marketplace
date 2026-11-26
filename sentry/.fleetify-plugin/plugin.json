@@ -1,7 +1,7 @@
 {
   "name": "sentry",
   "display_name": "Sentry",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Browse error groups, fetch stack traces, triage issues from Sentry.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://api.iconify.design/logos:sentry-icon.svg",
+  "icon": "https://api.iconify.design/logos/sentry-icon.svg",
   "requires_secrets": [
     {
       "key": "SENTRY_AUTH_TOKEN",

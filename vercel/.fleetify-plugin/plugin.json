@@ -1,7 +1,7 @@
 {
   "name": "vercel",
   "display_name": "Vercel",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "List deployments, inspect builds, fetch logs from your Vercel projects.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:vercel-icon.svg",
+  "icon": "https://api.iconify.design/logos/vercel-icon.svg",
   "requires_secrets": [
     {
       "key": "VERCEL_TOKEN",

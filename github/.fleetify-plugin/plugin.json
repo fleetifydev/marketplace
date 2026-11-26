@@ -1,7 +1,7 @@
 {
   "name": "github",
   "display_name": "GitHub",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read issues, PRs, file contents, and search across any GitHub repo the agent has access to.",
   "author": {
     "name": "Fleetify",
@@ -22,7 +22,7 @@
     "productivity",
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:github-icon.svg",
+  "icon": "https://api.iconify.design/logos/github-icon.svg",
   "requires_secrets": [
     {
       "key": "GITHUB_TOKEN",

@@ -1,7 +1,7 @@
 {
   "name": "code-reviewer",
   "display_name": "Code Reviewer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Subagent template that audits diffs for safety, style, and missing tests.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/mdi:source-pull.svg",
+  "icon": "https://api.iconify.design/mdi/source-pull.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 0,

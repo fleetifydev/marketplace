@@ -1,7 +1,7 @@
 {
   "name": "filesystem",
   "display_name": "Filesystem",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read and write files on your local disk with explicit allowed-directory scoping.",
   "author": {
     "name": "Fleetify",
@@ -22,7 +22,7 @@
     "productivity",
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/ic:round-folder-special.svg",
+  "icon": "https://api.iconify.design/ic/round-folder-special.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

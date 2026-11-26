@@ -1,7 +1,7 @@
 {
   "name": "brave-search",
   "display_name": "Brave Search",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Anonymous web + local search via Brave's API. Default goto for grounded research.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:brave.svg",
+  "icon": "https://api.iconify.design/logos/brave.svg",
   "requires_secrets": [
     {
       "key": "BRAVE_API_KEY",

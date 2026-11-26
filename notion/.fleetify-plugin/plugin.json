@@ -1,7 +1,7 @@
 {
   "name": "notion",
   "display_name": "Notion",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read + write Notion pages, databases, and blocks straight from chat.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:notion-icon.svg",
+  "icon": "https://api.iconify.design/logos/notion-icon.svg",
   "requires_secrets": [
     {
       "key": "NOTION_API_KEY",

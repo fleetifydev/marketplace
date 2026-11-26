@@ -1,7 +1,7 @@
 {
   "name": "supabase",
   "display_name": "Supabase",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Query tables, manage auth, inspect storage buckets on Supabase projects.",
   "author": {
     "name": "Fleetify",
@@ -22,7 +22,7 @@
     "infrastructure",
     "data"
   ],
-  "icon": "https://api.iconify.design/logos:supabase-icon.svg",
+  "icon": "https://api.iconify.design/logos/supabase-icon.svg",
   "requires_secrets": [
     {
       "key": "SUPABASE_URL",

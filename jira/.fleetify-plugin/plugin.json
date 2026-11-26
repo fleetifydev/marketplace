@@ -1,7 +1,7 @@
 {
   "name": "jira",
   "display_name": "Jira",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read + update Jira tickets, sprints, and projects across Atlassian Cloud.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:jira.svg",
+  "icon": "https://api.iconify.design/logos/jira.svg",
   "requires_secrets": [
     {
       "key": "JIRA_HOST",

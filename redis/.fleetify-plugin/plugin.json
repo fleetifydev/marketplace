@@ -1,7 +1,7 @@
 {
   "name": "redis",
   "display_name": "Redis",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read-only Redis client: keys, hashes, lists, sorted-sets inspection.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://api.iconify.design/logos:redis.svg",
+  "icon": "https://api.iconify.design/logos/redis.svg",
   "requires_secrets": [
     {
       "key": "REDIS_URL",

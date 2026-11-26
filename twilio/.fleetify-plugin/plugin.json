@@ -1,7 +1,7 @@
 {
   "name": "twilio",
   "display_name": "Twilio",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Send SMS, place voice calls, manage Twilio phone numbers.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:twilio-icon.svg",
+  "icon": "https://api.iconify.design/logos/twilio-icon.svg",
   "requires_secrets": [
     {
       "key": "TWILIO_ACCOUNT_SID",

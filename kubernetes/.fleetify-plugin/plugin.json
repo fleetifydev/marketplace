@@ -1,7 +1,7 @@
 {
   "name": "kubernetes",
   "display_name": "Kubernetes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Inspect pods, services, deployments via your current kubectl context.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:kubernetes.svg",
+  "icon": "https://api.iconify.design/logos/kubernetes.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

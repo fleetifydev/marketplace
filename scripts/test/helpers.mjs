@@ -73,7 +73,7 @@ function baseManifest(name, type) {
     author: { name: "Test Author", url: "https://example.com" },
     providers: [...PROVIDER_SETS[type]],
     tags: ["productivity"],
-    icon: "https://api.iconify.design/mdi:puzzle-outline.svg",
+    icon: "https://api.iconify.design/mdi/puzzle-outline.svg",
     requires_secrets: [],
     declares: { mcp_servers: 0, templates: 0, workflows: 0, prompts: 0, providers: {} },
     homepage: `https://github.com/fleetifydev/marketplace/tree/main/${name}`,

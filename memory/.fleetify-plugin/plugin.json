@@ -1,7 +1,7 @@
 {
   "name": "memory",
   "display_name": "Memory",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Persistent knowledge-graph memory: entities, relations, and observations across sessions.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/mdi:database.svg",
+  "icon": "https://api.iconify.design/mdi/database.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

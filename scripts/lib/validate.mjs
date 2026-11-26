@@ -317,7 +317,16 @@ export function validatePlugin(repoRoot, dirName) {
     });
   }
   if (!isHttpsUrl(manifest.icon)) {
-    error(MF, `"icon" must be an https:// URL, e.g. https://api.iconify.design/logos:github-icon.svg — Fleet does not render relative icon paths (got ${q(manifest.icon)})${see("manifest-fields")}`);
+    error(MF, `"icon" must be an https:// URL, e.g. https://api.iconify.design/logos/github-icon.svg — Fleet does not render relative icon paths (got ${q(manifest.icon)})${see("manifest-fields")}`);
+  } else {
+    // api.iconify.design answers the old prefix:name.svg form with 404. Match
+    // the path alone, so a query or a fragment can't hide it.
+    const url = URL.canParse(manifest.icon) ? new URL(manifest.icon) : null;
+    const iconify = url?.hostname === "api.iconify.design" && /^\/([a-z0-9-]+):([a-z0-9-]+\.svg)$/i.exec(url.pathname);
+    if (iconify) {
+      const fixed = `https://api.iconify.design/${iconify[1]}/${iconify[2]}${url.search}${url.hash}`;
+      error(MF, `"icon" uses Iconify's old prefix:name form, which api.iconify.design answers with 404 — use ${fixed}${see("manifest-fields")}`);
+    }
   }
   if (!nonEmpty(manifest.homepage) || !manifest.homepage.startsWith("https://")) {
     error(MF, `"homepage" must be an https:// URL (got ${q(manifest.homepage)}) — for plugins in this repo use ${MARKETPLACE_TREE_URL}/${dirName}`);

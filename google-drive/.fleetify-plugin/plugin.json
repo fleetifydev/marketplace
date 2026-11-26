@@ -1,7 +1,7 @@
 {
   "name": "google-drive",
   "display_name": "Google Drive",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "List, read, and search Google Drive files. OAuth-based, read-only by default.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:google-drive.svg",
+  "icon": "https://api.iconify.design/logos/google-drive.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

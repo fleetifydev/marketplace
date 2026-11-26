@@ -1,7 +1,7 @@
 {
   "name": "gmail",
   "display_name": "Gmail",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read inbox, draft + send messages, manage labels via Gmail's API.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:google-gmail.svg",
+  "icon": "https://api.iconify.design/logos/google-gmail.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,
