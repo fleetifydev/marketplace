@@ -1,7 +1,7 @@
 {
   "name": "diff-summarizer",
   "display_name": "Diff Summarizer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Skill that turns `git diff` output into a tight PR-ready summary.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:git-icon.svg",
+  "icon": "https://api.iconify.design/logos/git-icon.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 0,

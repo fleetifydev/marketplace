@@ -1,7 +1,7 @@
 {
   "name": "fetch",
   "display_name": "Fetch",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Plain HTTP fetcher: get any URL and return cleaned text, no auth required.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/mdi:web.svg",
+  "icon": "https://api.iconify.design/mdi/web.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

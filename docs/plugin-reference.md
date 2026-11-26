@@ -57,7 +57,7 @@ above. Symlinks are rejected, and `plugin.json` and `mcp.json` may be at most
 | `author` | yes | `{ "name": …, "url"?: … }`; `url` must be `https://`. For community plugins, that's you | `{ "name": "Jane Doe", "url": "https://github.com/jane" }` |
 | `providers` | yes | Non-empty list of [provider ids](#providers), no duplicates | `["claude-code", "codex-cli"]` |
 | `tags` | yes | One or more of `productivity`, `infrastructure`, `data`, `dev` | `["productivity"]` |
-| `icon` | yes | An `https://` URL; [Iconify](https://icon-sets.iconify.design/) is recommended. Fleet does not render relative paths | `"https://api.iconify.design/logos:github-icon.svg"` |
+| `icon` | yes | An `https://` URL; [Iconify](https://icon-sets.iconify.design/) is recommended, as `https://api.iconify.design/<prefix>/<name>.svg` (the old `<prefix>:<name>.svg` form answers 404). Fleet does not render relative paths | `"https://api.iconify.design/logos/github-icon.svg"` |
 | `requires_secrets` | no | See [Secrets](#secrets) | `[]` |
 | `declares` | yes | Component counts; see [declares](#declares) | |
 | `homepage` | yes | An `https://` URL. For plugins in this repo use `https://github.com/fleetifydev/marketplace/tree/main/<name>` | |

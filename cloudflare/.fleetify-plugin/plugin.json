@@ -1,7 +1,7 @@
 {
   "name": "cloudflare",
   "display_name": "Cloudflare",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Manage Workers, KV, R2, DNS records — Cloudflare's official MCP.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:cloudflare.svg",
+  "icon": "https://api.iconify.design/logos/cloudflare.svg",
   "requires_secrets": [
     {
       "key": "CLOUDFLARE_API_TOKEN",

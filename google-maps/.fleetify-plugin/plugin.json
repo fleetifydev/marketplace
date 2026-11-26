@@ -1,7 +1,7 @@
 {
   "name": "google-maps",
   "display_name": "Google Maps",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Geocode addresses, get directions, search nearby places.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:google-maps.svg",
+  "icon": "https://api.iconify.design/logos/google-maps.svg",
   "requires_secrets": [
     {
       "key": "GOOGLE_MAPS_API_KEY",

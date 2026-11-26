@@ -1,7 +1,7 @@
 {
   "name": "stripe",
   "display_name": "Stripe",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read customers, charges, subscriptions; issue refunds and create payment links.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:stripe.svg",
+  "icon": "https://api.iconify.design/logos/stripe.svg",
   "requires_secrets": [
     {
       "key": "STRIPE_SECRET_KEY",

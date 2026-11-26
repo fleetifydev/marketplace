@@ -1,7 +1,7 @@
 {
   "name": "aws",
   "display_name": "AWS",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Inspect AWS resources — EC2, S3, Lambda, IAM — with read-only credentials.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "infrastructure"
   ],
-  "icon": "https://api.iconify.design/logos:aws.svg",
+  "icon": "https://api.iconify.design/logos/aws.svg",
   "requires_secrets": [
     {
       "key": "AWS_ACCESS_KEY_ID",

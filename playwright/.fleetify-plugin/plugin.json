@@ -1,7 +1,7 @@
 {
   "name": "playwright",
   "display_name": "Playwright",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Cross-browser automation (Chromium / Firefox / WebKit) for tests and scraping.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:playwright.svg",
+  "icon": "https://api.iconify.design/logos/playwright.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

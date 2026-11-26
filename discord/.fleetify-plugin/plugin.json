@@ -1,7 +1,7 @@
 {
   "name": "discord",
   "display_name": "Discord",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Bot-level Discord operations: read channels, post messages, manage roles.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:discord-icon.svg",
+  "icon": "https://api.iconify.design/logos/discord-icon.svg",
   "requires_secrets": [
     {
       "key": "DISCORD_TOKEN",

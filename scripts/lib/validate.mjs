@@ -317,7 +317,13 @@ export function validatePlugin(repoRoot, dirName) {
     });
   }
   if (!isHttpsUrl(manifest.icon)) {
-    error(MF, `"icon" must be an https:// URL, e.g. https://api.iconify.design/logos:github-icon.svg — Fleet does not render relative icon paths (got ${q(manifest.icon)})${see("manifest-fields")}`);
+    error(MF, `"icon" must be an https:// URL, e.g. https://api.iconify.design/logos/github-icon.svg — Fleet does not render relative icon paths (got ${q(manifest.icon)})${see("manifest-fields")}`);
+  } else {
+    // api.iconify.design answers the old prefix:name.svg form with 404.
+    const iconify = /^https:\/\/api\.iconify\.design\/([a-z0-9-]+):([a-z0-9-]+)\.svg$/i.exec(manifest.icon);
+    if (iconify) {
+      error(MF, `"icon" uses Iconify's old prefix:name form, which api.iconify.design answers with 404 — use https://api.iconify.design/${iconify[1]}/${iconify[2]}.svg${see("manifest-fields")}`);
+    }
   }
   if (!nonEmpty(manifest.homepage) || !manifest.homepage.startsWith("https://")) {
     error(MF, `"homepage" must be an https:// URL (got ${q(manifest.homepage)}) — for plugins in this repo use ${MARKETPLACE_TREE_URL}/${dirName}`);

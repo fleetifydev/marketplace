@@ -105,7 +105,7 @@ export function scaffoldPlugin({ root, name, type, displayName, description, aut
       : { name: author || `${TODO}: your name` },
     providers: [...PROVIDER_SETS[type]],
     tags: ["productivity"],
-    icon: "https://api.iconify.design/mdi:puzzle-outline.svg",
+    icon: "https://api.iconify.design/mdi/puzzle-outline.svg",
     requires_secrets: [],
     declares: { mcp_servers: 0, templates: 0, workflows: 0, prompts: 0, providers: {} },
     homepage: `${MARKETPLACE_TREE_URL}/${name}`,

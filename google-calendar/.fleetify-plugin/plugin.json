@@ -1,7 +1,7 @@
 {
   "name": "google-calendar",
   "display_name": "Google Calendar",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read events, create + update Calendar entries across your Google calendars.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:google-calendar.svg",
+  "icon": "https://api.iconify.design/logos/google-calendar.svg",
   "requires_secrets": [],
   "declares": {
     "mcp_servers": 1,

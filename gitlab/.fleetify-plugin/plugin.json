@@ -1,7 +1,7 @@
 {
   "name": "gitlab",
   "display_name": "GitLab",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Read issues, MRs, pipelines, and code from GitLab projects.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:gitlab.svg",
+  "icon": "https://api.iconify.design/logos/gitlab.svg",
   "requires_secrets": [
     {
       "key": "GITLAB_PERSONAL_ACCESS_TOKEN",

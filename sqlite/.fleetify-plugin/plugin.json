@@ -1,7 +1,7 @@
 {
   "name": "sqlite",
   "display_name": "SQLite",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Local SQLite client: query schemas, run SELECT, inspect indexes.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "data"
   ],
-  "icon": "https://api.iconify.design/logos:sqlite.svg",
+  "icon": "https://api.iconify.design/logos/sqlite.svg",
   "requires_secrets": [
     {
       "key": "SQLITE_DB_PATH",

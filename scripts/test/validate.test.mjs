@@ -120,6 +120,17 @@ test("icon must be an https URL (Fleet does not render relative icon paths)", (t
   expectIssue(run(t, mcpPluginFiles(P, { manifest: { icon: "../outside.svg" } })), "error", /"icon" must be an https:\/\/ URL/);
 });
 
+// api.iconify.design answers 404 to the old prefix:name.svg form, so every
+// card fell back to the generic glyph. The error names the URL to use.
+test("an Iconify icon uses the /prefix/name.svg URL, not prefix:name", (t) => {
+  expectIssue(
+    run(t, mcpPluginFiles(P, { manifest: { icon: "https://api.iconify.design/logos:github-icon.svg" } })),
+    "error",
+    /https:\/\/api\.iconify\.design\/logos\/github-icon\.svg/,
+  );
+  expectClean(run(t, mcpPluginFiles(P, { manifest: { icon: "https://api.iconify.design/logos/github-icon.svg" } })));
+});
+
 test("author.url and requires_secrets[].url must be https URLs", (t) => {
   expectIssue(run(t, mcpPluginFiles(P, { manifest: { author: { name: "X", url: "javascript:alert(1)" } } })), "error", /"author\.url" must be an https:\/\/ URL/);
   const rs = [{ key: "EXAMPLE_TOKEN", label: "Example token", url: "http://example.com/token" }];

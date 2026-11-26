@@ -1,7 +1,7 @@
 {
   "name": "asana",
   "display_name": "Asana",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Browse projects, tasks, and teams. Update task status from chat.",
   "author": {
     "name": "Fleetify",
@@ -21,7 +21,7 @@
   "tags": [
     "productivity"
   ],
-  "icon": "https://api.iconify.design/logos:asana-icon.svg",
+  "icon": "https://api.iconify.design/logos/asana-icon.svg",
   "requires_secrets": [
     {
       "key": "ASANA_TOKEN",
